@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://brighthammer.github.io/"/>
-  <updated>2020-05-11T08:02:10.041Z</updated>
+  <updated>2020-07-26T16:15:26.644Z</updated>
   <id>https://brighthammer.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>office - 如何优雅地输入数学公式</title>
+    <link href="https://brighthammer.github.io/2020/07/26/office-%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/"/>
+    <id>https://brighthammer.github.io/2020/07/26/office-%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</id>
+    <published>2020-07-26T06:32:39.000Z</published>
+    <updated>2020-07-26T16:15:26.644Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>office输入公式的快捷语法详细介绍<br><a id="more"></a></p></blockquote><h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>最近用word写作业要输很多公式，网上学习了一些小技巧，感觉终于感受到了用word输公式的快乐，表示再也不怕word的公式不好看了，也不需要频繁切换鼠标键盘了，写个帖子稍微总结一下常用操作。</p><p>先放上一些主要的参考链接：</p><ul><li><strong>官方说明：<a href="[https://support.microsoft.com/zh-cn/office/word-%e4%b8%ad%e4%bd%bf%e7%94%a8-unicodemath-%e5%92%8c-latex-%e7%9a%84%e7%ba%bf%e6%80%a7%e6%a0%bc%e5%bc%8f%e5%85%ac%e5%bc%8f-2e00618d-b1fd-49d8-8cb4-8d17f25754f8?ui=zh-cn&amp;rs=zh-cn&amp;ad=cn](https://support.microsoft.com/zh-cn/office/word-中使用-unicodemath-和-latex-的线性格式公式-2e00618d-b1fd-49d8-8cb4-8d17f25754f8?ui=zh-cn&amp;rs=zh-cn&amp;ad=cn">Word 中使用 UnicodeMath 和 LaTeX 的线性格式公式</a>)</strong></li><li><strong>Jacob Zhong 非常全面的总结：<a href="https://zyxin.xyz/blog/2017-08/WordMath/" target="_blank" rel="noopener">Word - 快速输入数学公式</a></strong></li></ul><h1 id="1-快捷键"><a href="#1-快捷键" class="headerlink" title="1.快捷键"></a>1.快捷键</h1><ul><li><strong><code>Alt</code></strong>+<strong> <code>=</code></strong><ul><li>插入新公式，或将当前选中的内容变换为公式</li></ul></li><li><strong><code>Ctrl</code></strong> + <strong><code>I</code></strong><ul><li>将公式设为斜体，可以在插入公式后立即设置，这样打出来的就直接是斜体了，减少了鼠标选中的操作</li></ul></li><li><strong><code>空格</code></strong><ul><li>输入快捷命令后最常用的格式转换键，即输入快捷命令后，按下空格，公式即会变成对应的格式</li></ul></li><li><strong><code>Enter</code></strong><ul><li>在部分场景下用于格式转换+回车</li></ul></li></ul><h1 id="2-常用符号快捷输入"><a href="#2-常用符号快捷输入" class="headerlink" title="2. 常用符号快捷输入"></a>2. 常用符号快捷输入</h1><p>主要是这一部分符号的输入：</p><p><img src="/images/WordFormulaSymbol.png" alt="img"></p><p><strong>关键方法：<code>\ + 快捷命令 + 空格</code></strong></p><p>命令解释：”\“作为转义符，鼠标停留在符号上时会出现相应的快捷命令，比较好记，最后敲空格实现格式转换</p><p><img src="/images/WordFormulaSymbol-theta.png" alt="img"></p><p>一些栗子：</p><ul><li><code>\alpha</code> $\rightarrow$ $\alpha$</li><li><code>\beta</code> $\rightarrow$ $\beta$</li><li><code>\pi</code> $\rightarrow$ $\pi$</li><li><code>\varphi</code> $\rightarrow$ $\varphi$</li><li><code>...</code></li></ul><p>另外，有一些常用的数学符号，不需要转义符word也会自动合并</p><ul><li><code>/=</code> $\rightarrow$ $\neq$</li><li><code>+-</code> $\rightarrow$ $\pm$</li><li><code>&lt;=</code> $\rightarrow$ $\leq$</li><li><code>...</code></li></ul><p>大部分快捷命令和LaTeX，Markdown等都差不多，还是比较好记的。</p><h1 id="3-常用结构快捷输入"><a href="#3-常用结构快捷输入" class="headerlink" title="3. 常用结构快捷输入"></a>3. 常用结构快捷输入</h1><p>接下来一些常用的最费鼠标的各种结构（剩下一些用到的时候再来补充，更详细的可以参考帖子开头给的参考链接）：</p><p><img src="/images/WordFormulaStructures.png" alt="img"></p><h2 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h2><ul><li><code>a/b</code> $\rightarrow$ $\frac{a}{b}$</li><li></li></ul><h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><h2 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h2><h2 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h2><h2 id="大型运算符"><a href="#大型运算符" class="headerlink" title="大型运算符"></a>大型运算符</h2><h2 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h2><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h2 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h2><h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><div class="note info">            <p><strong>一个生成[1, 15]的随机数例子：</strong></p>          </div><div class="note warning">            <p>依然需要使用time来做为种子产生每个不同时刻都不同的随机序列，但由于time默认返回的是以秒计的时间，所以有可能多次使用的都是相同的种子。</p>          </div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;office输入公式的快捷语法详细介绍&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="c++ coding" scheme="https://brighthammer.github.io/categories/c-coding/"/>
+    
+    
+      <category term="office" scheme="https://brighthammer.github.io/tags/office/"/>
+    
+      <category term="word" scheme="https://brighthammer.github.io/tags/word/"/>
+    
+      <category term="公式" scheme="https://brighthammer.github.io/tags/%E5%85%AC%E5%BC%8F/"/>
+    
+      <category term="排版" scheme="https://brighthammer.github.io/tags/%E6%8E%92%E7%89%88/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -42,9 +72,9 @@
     <link href="https://brighthammer.github.io/2020/02/26/Ubuntu%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>https://brighthammer.github.io/2020/02/26/Ubuntu%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
     <published>2020-02-26T03:33:49.000Z</published>
-    <updated>2020-05-11T08:02:10.038Z</updated>
+    <updated>2020-07-26T15:31:48.409Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>经常忘记的Ubuntu终端命令，mark一下</p></blockquote><a id="more"></a><h1 id="文件相关"><a href="#文件相关" class="headerlink" title="文件相关"></a>文件相关</h1><ul><li><p>超级权限文件夹<br><code>sudo nautilus</code></p></li><li><p>创建新文件<br><code>touch newfile.txt</code></p></li><li><p>创建文件夹<br><code>mkdir newdir</code></p></li><li><p>创建文件夹快捷方式<br><code>ln -s /home/panda/Programs/ ~/桌面/Programs</code></p><h1 id="环境-软件相关"><a href="#环境-软件相关" class="headerlink" title="环境/软件相关"></a>环境/软件相关</h1></li><li><p>查看opencv版本<br><code>pkg-config --modversion opencv</code></p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1></li><li><p>刷新dns的缓存：<br><code>sudo /etc/init.d/nscd restart</code><br>如果发现提示命令找不到：sudo: /etc/init.d/nscd: command not found<br>需要先安装nscd包：<br><code>sudo apt-get install nscd</code></p></li><li><p>重启网络：<br><code>sudo /etc/init.d/networking restart</code></p></li><li><p>修改grub参数并更新grub<br><code>sudo vim /etc/default/grub</code><br><code>sudo update-grub</code></p></li></ul><div class="note default">            <p>Ubunt&amp; Vim 常用命令汇总壁纸 </p>          </div><p><img src="https://wx1.sinaimg.cn/large/ee0f01e3gy1gc9ntrr42ij21ci0u07wh.jpg" alt="img"></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>经常忘记的Ubuntu终端命令，mark一下</p></blockquote><a id="more"></a><h1 id="文件相关"><a href="#文件相关" class="headerlink" title="文件相关"></a>文件相关</h1><ul><li><p>超级权限文件夹<br><code>sudo nautilus</code></p></li><li><p>创建新文件<br><code>touch newfile.txt</code></p></li><li><p>创建文件夹<br><code>mkdir newdir</code></p></li><li><p>创建文件夹快捷方式<br><code>ln -s /home/panda/Programs/ ~/桌面/Programs</code></p><h1 id="环境-软件相关"><a href="#环境-软件相关" class="headerlink" title="环境/软件相关"></a>环境/软件相关</h1></li><li><p>查看opencv版本<br><code>pkg-config --modversion opencv</code></p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1></li><li><p>刷新dns的缓存：<br><code>sudo /etc/init.d/nscd restart</code><br>如果发现提示命令找不到：sudo: /etc/init.d/nscd: command not found<br>需要先安装nscd包：<br><code>sudo apt-get install nscd</code></p></li><li><p>重启网络：<br><code>sudo /etc/init.d/networking restart</code></p></li><li><p>修改grub参数并更新grub<br><code>sudo vim /etc/default/grub</code><br><code>sudo update-grub</code></p></li></ul><div class="note default">            <p>Ubunt&amp; Vim 常用命令汇总壁纸 </p>          </div><p><img src="/images/UbuntuCommand.jpg" alt=""></p><p><img src="https://wx1.sinaimg.cn/large/ee0f01e3gy1gc9ntrr42ij21ci0u07wh.jpg" alt="img"></p>]]></content>
     
     <summary type="html">
     
