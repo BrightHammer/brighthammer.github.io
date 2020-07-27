@@ -55,14 +55,49 @@
 <p><img src="/images/WordFormulaStructures.png" alt="img"></p>
 <h2 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h2><ul>
 <li><code>a/b</code> $\rightarrow$ $\frac{a}{b}$</li>
-<li></li>
+<li><code>a\sdiv b</code> $\rightarrow$ $a/b$</li>
+<li><code>\partial a/\partial b</code> $\rightarrow$ $\frac{\partial a}{\partial b}$</li>
+<li><code>\Delta a/\Delta b</code> $\rightarrow$ $\frac{\Delta a}{\Delta b}$</li>
 </ul>
-<h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><h2 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h2><h2 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h2><h2 id="大型运算符"><a href="#大型运算符" class="headerlink" title="大型运算符"></a>大型运算符</h2><h2 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h2><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h2 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h2><h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><div class="note info">
-            <p><strong>一个生成[1, 15]的随机数例子：</strong></p>
-          </div>
-<div class="note warning">
-            <p>依然需要使用time来做为种子产生每个不同时刻都不同的随机序列，但由于time默认返回的是以秒计的时间，所以有可能多次使用的都是相同的种子。</p>
-          </div>
+<h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><ul>
+<li><code>a^b</code> $\rightarrow$ $a^b$</li>
+<li><code>a_b</code> $\rightarrow$ $a_b$</li>
+<li><code>a_b^c</code> $\rightarrow$ $a_b^c$</li>
+<li><code>(_c^b)a</code> $\rightarrow$ $_c^ba$</li>
+</ul>
+<h2 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h2><ul>
+<li><code>\sqrt a</code> $\rightarrow$ $\sqrt a$</li>
+<li><code>\sqrt (b&amp;a)</code> $\rightarrow$ $\sqrt[b]{a}$</li>
+<li><code>\cbrt a</code> $\rightarrow$ $\sqrt[3]{a}$</li>
+</ul>
+<h2 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h2><ul>
+<li><code>\int \of a</code> $\rightarrow$ $\int{a}$</li>
+<li><code>\iint \of a</code> $\rightarrow$ $\iint{a}$</li>
+<li><code>\int^b_c a</code> $\rightarrow$ $\int^b_c{a}$</li>
+</ul>
+<h2 id="大型运算符"><a href="#大型运算符" class="headerlink" title="大型运算符"></a>大型运算符</h2><h2 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h2><p>输入对应的括号后点空格</p>
+<ul>
+<li><code>(a+b)</code> $\rightarrow$ $(a+b)$</li>
+<li><code>{a\times [b\times (c+d)]}</code> $\rightarrow$ ${a\times[b\times(c+d)]}$</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h2 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h2><ul>
+<li><code>a\dot</code> $\rightarrow$ $\dot{a}$</li>
+<li><code>a\ddot</code> $\rightarrow$ $\ddot{a}$</li>
+<li><code>a\hat</code> $\rightarrow$ $\hat{a}$</li>
+<li><code>a\tilde</code> $\rightarrow$ $\tilde{a}$</li>
+</ul>
+<h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><ul>
+<li><code>\matrix (a&amp;b@c&amp;d)</code> $\rightarrow$ <script type="math/tex">\matrix{a&b \\ c&d}</script></li>
+</ul>
+<h1 id="4-自动编号"><a href="#4-自动编号" class="headerlink" title="4. 自动编号"></a>4. 自动编号</h1><p>以前公式自动编号我都是用一个表格，左边放公式，右边放编号，整体效果还行但还是不够完美，后来发现其实Word的公式有带编号的格式。</p>
+<p><strong>关键方法：在公式右边输入<code>#()</code>后按回车（这里必须回车，空格不行），随后在格式化后的括号中插入自动编号即可。</strong></p>
+<p>编号格式化之后的效果如下图：</p>
+<p><img src="/images/WordFormulaAutoNumbering.png" alt="img"></p>
+<p>然后在括号中<strong>插入-文档部件-域-编号-AutoNum-1,2,3</strong>即可，其他公式直接复制这个编号过去，文档中的公式即实现了自动编号。</p>
+<p><img src="/images/WordFormulaAutoNumbering-InsertNum.png" alt="img"></p>
+<blockquote>
+<p>为了写这篇帖子还把Markdown的公式过了一遍，，，感觉一些较为简单的公式还是Word稍微方便一些😁</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>c++ coding</category>
@@ -136,28 +171,6 @@
       <tags>
         <tag>Ubuntu</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>大宝贝瘦身系列</title>
-    <url>/2020/02/08/%E5%A4%A7%E5%AE%9D%E8%B4%9D%E7%98%A6%E8%BA%AB%E7%B3%BB%E5%88%97/</url>
-    <content><![CDATA[<p>大宝贝天鹅臂、天鹅腿、拉伸系列视频<br><strong>每天不间断，坚持就是胜利！</strong></p>
-<a id="more"></a>
-
-<h1 id="1-天鹅臂"><a href="#1-天鹅臂" class="headerlink" title="1. 天鹅臂"></a>1. 天鹅臂</h1><iframe src="//player.bilibili.com/player.html?aid=4461931&cid=7230127&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h1 id="2-体态气场大法"><a href="#2-体态气场大法" class="headerlink" title="2. 体态气场大法"></a>2. 体态气场大法</h1><iframe src="//player.bilibili.com/player.html?aid=68937221&cid=119474915&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h1 id="3-周六野减斜方肌"><a href="#3-周六野减斜方肌" class="headerlink" title="3. 周六野减斜方肌"></a>3. 周六野减斜方肌</h1><iframe src="//player.bilibili.com/player.html?aid=63140904&cid=109662616&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h1 id="4-全身拉伸"><a href="#4-全身拉伸" class="headerlink" title="4. 全身拉伸"></a>4. 全身拉伸</h1><h2 id="初级"><a href="#初级" class="headerlink" title="初级"></a>初级</h2><iframe src="//player.bilibili.com/player.html?aid=36756760&cid=64545809&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><iframe src="//player.bilibili.com/player.html?aid=66684020&cid=115647636&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h1 id="5-天鹅腿"><a href="#5-天鹅腿" class="headerlink" title="5. 天鹅腿"></a>5. 天鹅腿</h1><iframe src="//player.bilibili.com/player.html?aid=15146560&cid=24659063&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-]]></content>
-      <categories>
-        <category>Darling</category>
-      </categories>
   </entry>
   <entry>
     <title>文章样式测试帖</title>
