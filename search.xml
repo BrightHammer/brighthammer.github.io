@@ -1,6 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/05/11/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>Example</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>office - 如何优雅地输入数学公式</title>
+    <url>/2020/07/26/office-%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</url>
+    <content><![CDATA[<blockquote>
+<p>office输入公式的快捷语法详细介绍<br><a id="more"></a></p>
+</blockquote>
+<h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>最近用word写作业要输很多公式，网上学习了一些小技巧，感觉终于感受到了用word输公式的快乐，表示再也不怕word的公式不好看了，也不需要频繁切换鼠标键盘了，写个帖子稍微总结一下常用操作。</p>
+<p>先放上一些主要的参考链接：</p>
+<ul>
+<li><strong>官方说明：<a href="[https://support.microsoft.com/zh-cn/office/word-%e4%b8%ad%e4%bd%bf%e7%94%a8-unicodemath-%e5%92%8c-latex-%e7%9a%84%e7%ba%bf%e6%80%a7%e6%a0%bc%e5%bc%8f%e5%85%ac%e5%bc%8f-2e00618d-b1fd-49d8-8cb4-8d17f25754f8?ui=zh-cn&amp;rs=zh-cn&amp;ad=cn](https://support.microsoft.com/zh-cn/office/word-中使用-unicodemath-和-latex-的线性格式公式-2e00618d-b1fd-49d8-8cb4-8d17f25754f8?ui=zh-cn&amp;rs=zh-cn&amp;ad=cn">Word 中使用 UnicodeMath 和 LaTeX 的线性格式公式</a>)</strong></li>
+<li><strong>Jacob Zhong 非常全面的总结：<a href="https://zyxin.xyz/blog/2017-08/WordMath/" target="_blank" rel="noopener">Word - 快速输入数学公式</a></strong></li>
+</ul>
+<h1 id="1-快捷键"><a href="#1-快捷键" class="headerlink" title="1.快捷键"></a>1.快捷键</h1><ul>
+<li><strong><code>Alt</code></strong>+<strong> <code>=</code></strong><ul>
+<li>插入新公式，或将当前选中的内容变换为公式</li>
+</ul>
+</li>
+<li><strong><code>Ctrl</code></strong> + <strong><code>I</code></strong><ul>
+<li>将公式设为斜体，可以在插入公式后立即设置，这样打出来的就直接是斜体了，减少了鼠标选中的操作</li>
+</ul>
+</li>
+<li><strong><code>空格</code></strong><ul>
+<li>输入快捷命令后最常用的格式转换键，即输入快捷命令后，按下空格，公式即会变成对应的格式</li>
+</ul>
+</li>
+<li><strong><code>Enter</code></strong><ul>
+<li>在部分场景下用于格式转换+回车</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-常用符号快捷输入"><a href="#2-常用符号快捷输入" class="headerlink" title="2. 常用符号快捷输入"></a>2. 常用符号快捷输入</h1><p>主要是这一部分符号的输入：</p>
+<p><img src="/images/WordFormulaSymbol.png" alt="img"></p>
+<p><strong>关键方法：<code>\ + 快捷命令 + 空格</code></strong></p>
+<p>命令解释：”\\”作为转义符，鼠标停留在符号上时会出现相应的快捷命令，比较好记，最后敲空格实现格式转换</p>
+<p><img src="/images/WordFormulaSymbol-theta.png" alt="img"></p>
+<p>一些栗子：</p>
+<ul>
+<li><code>\alpha</code> $\rightarrow$ $\alpha$</li>
+<li><code>\beta</code> $\rightarrow$ $\beta$</li>
+<li><code>\pi</code> $\rightarrow$ $\pi$</li>
+<li><code>\varphi</code> $\rightarrow$ $\varphi$</li>
+<li><code>...</code></li>
+</ul>
+<p>另外，有一些常用的数学符号，不需要转义符word也会自动合并</p>
+<ul>
+<li><code>/=</code> $\rightarrow$ $\neq$</li>
+<li><code>+-</code> $\rightarrow$ $\pm$</li>
+<li><code>&lt;=</code> $\rightarrow$ $\leq$</li>
+<li><code>...</code></li>
+</ul>
+<p>大部分快捷命令和LaTeX，Markdown等都差不多，还是比较好记的。</p>
+<h1 id="3-常用结构快捷输入"><a href="#3-常用结构快捷输入" class="headerlink" title="3. 常用结构快捷输入"></a>3. 常用结构快捷输入</h1><p>接下来一些常用的最费鼠标的各种结构（剩下一些用到的时候再来补充，更详细的可以参考帖子开头给的参考链接）：</p>
+<p><img src="/images/WordFormulaStructures.png" alt="img"></p>
+<h2 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h2><ul>
+<li><code>a/b</code> $\rightarrow$ $\frac{a}{b}$</li>
+<li><code>a\sdiv b</code> $\rightarrow$ $a/b$</li>
+<li><code>\partial a/\partial b</code> $\rightarrow$ $\frac{\partial a}{\partial b}$</li>
+<li><code>\Delta a/\Delta b</code> $\rightarrow$ $\frac{\Delta a}{\Delta b}$</li>
+</ul>
+<h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><ul>
+<li><code>a^b</code> $\rightarrow$ $a^b$</li>
+<li><code>a_b</code> $\rightarrow$ $a_b$</li>
+<li><code>a_b^c</code> $\rightarrow$ $a_b^c$</li>
+<li><code>(_c^b)a</code> $\rightarrow$ $_c^ba$</li>
+</ul>
+<h2 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h2><ul>
+<li><code>\sqrt a</code> $\rightarrow$ $\sqrt a$</li>
+<li><code>\sqrt (b&amp;a)</code> $\rightarrow$ $\sqrt[b]{a}$</li>
+<li><code>\cbrt a</code> $\rightarrow$ $\sqrt[3]{a}$</li>
+</ul>
+<h2 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h2><ul>
+<li><code>\int \of a</code> $\rightarrow$ $\int{a}$</li>
+<li><code>\iint \of a</code> $\rightarrow$ $\iint{a}$</li>
+<li><code>\int^b_c a</code> $\rightarrow$ $\int^b_c{a}$</li>
+</ul>
+<h2 id="大型运算符"><a href="#大型运算符" class="headerlink" title="大型运算符"></a>大型运算符</h2><h2 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h2><p>输入对应的括号后点空格</p>
+<ul>
+<li><code>(a+b)</code> $\rightarrow$ $(a+b)$</li>
+<li><code>{a\times [b\times (c+d)]}</code> $\rightarrow$ ${a\times[b\times(c+d)]}$</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h2 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h2><ul>
+<li><code>a\dot</code> $\rightarrow$ $\dot{a}$</li>
+<li><code>a\ddot</code> $\rightarrow$ $\ddot{a}$</li>
+<li><code>a\hat</code> $\rightarrow$ $\hat{a}$</li>
+<li><code>a\tilde</code> $\rightarrow$ $\tilde{a}$</li>
+</ul>
+<h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><ul>
+<li><code>\matrix (a&amp;b@c&amp;d)</code> $\rightarrow$ <script type="math/tex">\matrix{a&b \\ c&d}</script></li>
+</ul>
+<h1 id="4-自动编号"><a href="#4-自动编号" class="headerlink" title="4. 自动编号"></a>4. 自动编号</h1><p>以前公式自动编号我都是用一个表格，左边放公式，右边放编号，整体效果还行但还是不够完美，后来发现其实Word的公式有带编号的格式。</p>
+<p><strong>关键方法：在公式右边输入<code>#()</code>后按回车（这里必须回车，空格不行），随后在格式化后的括号中插入自动编号即可。</strong></p>
+<p>编号格式化之后的效果如下图：</p>
+<p><img src="/images/WordFormulaAutoNumbering.png" alt="img"></p>
+<p>然后在括号中<strong>插入-文档部件-域-编号-AutoNum-1,2,3</strong>即可，其他公式直接复制这个编号过去，文档中的公式即实现了自动编号。</p>
+<p><img src="/images/WordFormulaAutoNumbering-InsertNum.png" alt="img"></p>
+<blockquote>
+<p>为了写这篇帖子还把Markdown的公式过了一遍，，，感觉一些较为简单的公式还是Word稍微方便一些😁</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>c++ coding</category>
+      </categories>
+      <tags>
+        <tag>office</tag>
+        <tag>word</tag>
+        <tag>公式</tag>
+        <tag>排版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu终端常用命令</title>
+    <url>/2020/02/26/Ubuntu%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<blockquote>
+<p>经常忘记的Ubuntu终端命令，mark一下<br><a id="more"></a></p>
+</blockquote>
+<h1 id="文件相关"><a href="#文件相关" class="headerlink" title="文件相关"></a>文件相关</h1><ul>
+<li><p>超级权限文件夹<br><code>sudo nautilus</code></p>
+</li>
+<li><p>创建新文件<br><code>touch newfile.txt</code></p>
+</li>
+<li>创建文件夹<br><code>mkdir newdir</code></li>
+<li>创建文件夹快捷方式<br><code>ln -s /home/panda/Programs/ ~/桌面/Programs</code><h1 id="环境-软件相关"><a href="#环境-软件相关" class="headerlink" title="环境/软件相关"></a>环境/软件相关</h1></li>
+<li>查看opencv版本<br><code>pkg-config --modversion opencv</code><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1></li>
+<li>刷新dns的缓存：<br><code>sudo /etc/init.d/nscd restart</code><br>如果发现提示命令找不到：sudo: /etc/init.d/nscd: command not found<br>需要先安装nscd包：<br><code>sudo apt-get install nscd</code></li>
+<li>重启网络：<br><code>sudo /etc/init.d/networking restart</code></li>
+<li>修改grub参数并更新grub<br><code>sudo vim /etc/default/grub</code><br><code>sudo update-grub</code></li>
+</ul>
+<div class="note default">
+            <p>Ubunt&amp; Vim 常用命令汇总壁纸 </p>
+          </div>
+<p><img src="/images/UbuntuCommand.jpg" alt=""></p>
+<p><img src="https://wx1.sinaimg.cn/large/ee0f01e3gy1gc9ntrr42ij21ci0u07wh.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文章样式测试帖</title>
+    <url>/2020/02/07/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95%E5%B8%96/</url>
+    <content><![CDATA[<blockquote>
+<p>文章样式测试帖<br><a id="more"></a></p>
+</blockquote>
+<p><span id="inline-blue"> 站点配置文件 </span><br><span id="inline-purple"> 主题配置文件 </span><br><span id="inline-yellow"> 站点配置文件 </span><br><span id="inline-green"> 主题配置文件 </span></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;note default&quot;&gt;&lt;p&gt;default&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% note default %&#125; default &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note default">
+            <p>default </p>
+          </div>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note primary %&#125; primary &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note primary">
+            <p>primary </p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note success %&#125; success &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note success">
+            <p>success </p>
+          </div>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note info %&#125; info &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note info">
+            <p>info </p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125; warning &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning">
+            <p>warning </p>
+          </div>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125; dager &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note danger">
+            <p>dager </p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger no-icon %&#125; danger no-icon &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note danger no-icon">
+            <p>danger no-icon </p>
+          </div>
+]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++常用功能汇总-文件读写 计时 随机数</title>
     <url>/2020/02/02/C-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E6%B1%87%E6%80%BB-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99-%E8%AE%A1%E6%97%B6-%E9%9A%8F%E6%9C%BA%E6%95%B0/</url>
     <content><![CDATA[<blockquote>
@@ -115,210 +319,6 @@
         <tag>文件读写</tag>
         <tag>计时</tag>
         <tag>随机数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/05/11/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>Example</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu终端常用命令</title>
-    <url>/2020/02/26/Ubuntu%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<blockquote>
-<p>经常忘记的Ubuntu终端命令，mark一下<br><a id="more"></a></p>
-</blockquote>
-<h1 id="文件相关"><a href="#文件相关" class="headerlink" title="文件相关"></a>文件相关</h1><ul>
-<li><p>超级权限文件夹<br><code>sudo nautilus</code></p>
-</li>
-<li><p>创建新文件<br><code>touch newfile.txt</code></p>
-</li>
-<li>创建文件夹<br><code>mkdir newdir</code></li>
-<li>创建文件夹快捷方式<br><code>ln -s /home/panda/Programs/ ~/桌面/Programs</code><h1 id="环境-软件相关"><a href="#环境-软件相关" class="headerlink" title="环境/软件相关"></a>环境/软件相关</h1></li>
-<li>查看opencv版本<br><code>pkg-config --modversion opencv</code><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1></li>
-<li>刷新dns的缓存：<br><code>sudo /etc/init.d/nscd restart</code><br>如果发现提示命令找不到：sudo: /etc/init.d/nscd: command not found<br>需要先安装nscd包：<br><code>sudo apt-get install nscd</code></li>
-<li>重启网络：<br><code>sudo /etc/init.d/networking restart</code></li>
-<li>修改grub参数并更新grub<br><code>sudo vim /etc/default/grub</code><br><code>sudo update-grub</code></li>
-</ul>
-<div class="note default">
-            <p>Ubunt&amp; Vim 常用命令汇总壁纸 </p>
-          </div>
-<p><img src="/images/UbuntuCommand.jpg" alt=""></p>
-<p><img src="https://wx1.sinaimg.cn/large/ee0f01e3gy1gc9ntrr42ij21ci0u07wh.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Ubuntu</category>
-      </categories>
-      <tags>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文章样式测试帖</title>
-    <url>/2020/02/07/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95%E5%B8%96/</url>
-    <content><![CDATA[<blockquote>
-<p>文章样式测试帖<br><a id="more"></a></p>
-</blockquote>
-<p><span id="inline-blue"> 站点配置文件 </span><br><span id="inline-purple"> 主题配置文件 </span><br><span id="inline-yellow"> 站点配置文件 </span><br><span id="inline-green"> 主题配置文件 </span></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;note default&quot;&gt;&lt;p&gt;default&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% note default %&#125; default &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note default">
-            <p>default </p>
-          </div>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note primary %&#125; primary &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note primary">
-            <p>primary </p>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note success %&#125; success &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note success">
-            <p>success </p>
-          </div>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note info %&#125; info &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note info">
-            <p>info </p>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125; warning &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note warning">
-            <p>warning </p>
-          </div>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125; dager &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note danger">
-            <p>dager </p>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger no-icon %&#125; danger no-icon &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note danger no-icon">
-            <p>danger no-icon </p>
-          </div>
-]]></content>
-      <categories>
-        <category>test</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>office - 如何优雅地输入数学公式</title>
-    <url>/2020/07/26/office-%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</url>
-    <content><![CDATA[<blockquote>
-<p>office输入公式的快捷语法详细介绍<br><a id="more"></a></p>
-</blockquote>
-<h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>最近用word写作业要输很多公式，网上学习了一些小技巧，感觉终于感受到了用word输公式的快乐，表示再也不怕word的公式不好看了，也不需要频繁切换鼠标键盘了，写个帖子稍微总结一下常用操作。</p>
-<p>先放上一些主要的参考链接：</p>
-<ul>
-<li><strong>官方说明：<a href="[https://support.microsoft.com/zh-cn/office/word-%e4%b8%ad%e4%bd%bf%e7%94%a8-unicodemath-%e5%92%8c-latex-%e7%9a%84%e7%ba%bf%e6%80%a7%e6%a0%bc%e5%bc%8f%e5%85%ac%e5%bc%8f-2e00618d-b1fd-49d8-8cb4-8d17f25754f8?ui=zh-cn&amp;rs=zh-cn&amp;ad=cn](https://support.microsoft.com/zh-cn/office/word-中使用-unicodemath-和-latex-的线性格式公式-2e00618d-b1fd-49d8-8cb4-8d17f25754f8?ui=zh-cn&amp;rs=zh-cn&amp;ad=cn">Word 中使用 UnicodeMath 和 LaTeX 的线性格式公式</a>)</strong></li>
-<li><strong>Jacob Zhong 非常全面的总结：<a href="https://zyxin.xyz/blog/2017-08/WordMath/" target="_blank" rel="noopener">Word - 快速输入数学公式</a></strong></li>
-</ul>
-<h1 id="1-快捷键"><a href="#1-快捷键" class="headerlink" title="1.快捷键"></a>1.快捷键</h1><ul>
-<li><strong><code>Alt</code></strong>+<strong> <code>=</code></strong><ul>
-<li>插入新公式，或将当前选中的内容变换为公式</li>
-</ul>
-</li>
-<li><strong><code>Ctrl</code></strong> + <strong><code>I</code></strong><ul>
-<li>将公式设为斜体，可以在插入公式后立即设置，这样打出来的就直接是斜体了，减少了鼠标选中的操作</li>
-</ul>
-</li>
-<li><strong><code>空格</code></strong><ul>
-<li>输入快捷命令后最常用的格式转换键，即输入快捷命令后，按下空格，公式即会变成对应的格式</li>
-</ul>
-</li>
-<li><strong><code>Enter</code></strong><ul>
-<li>在部分场景下用于格式转换+回车</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-常用符号快捷输入"><a href="#2-常用符号快捷输入" class="headerlink" title="2. 常用符号快捷输入"></a>2. 常用符号快捷输入</h1><p>主要是这一部分符号的输入：</p>
-<p><img src="/images/WordFormulaSymbol.png" alt="img"></p>
-<p><strong>关键方法：<code>\ + 快捷命令 + 空格</code></strong></p>
-<p>命令解释：”\\”作为转义符，鼠标停留在符号上时会出现相应的快捷命令，比较好记，最后敲空格实现格式转换</p>
-<p><img src="/images/WordFormulaSymbol-theta.png" alt="img"></p>
-<p>一些栗子：</p>
-<ul>
-<li><code>\alpha</code> $\rightarrow$ $\alpha$</li>
-<li><code>\beta</code> $\rightarrow$ $\beta$</li>
-<li><code>\pi</code> $\rightarrow$ $\pi$</li>
-<li><code>\varphi</code> $\rightarrow$ $\varphi$</li>
-<li><code>...</code></li>
-</ul>
-<p>另外，有一些常用的数学符号，不需要转义符word也会自动合并</p>
-<ul>
-<li><code>/=</code> $\rightarrow$ $\neq$</li>
-<li><code>+-</code> $\rightarrow$ $\pm$</li>
-<li><code>&lt;=</code> $\rightarrow$ $\leq$</li>
-<li><code>...</code></li>
-</ul>
-<p>大部分快捷命令和LaTeX，Markdown等都差不多，还是比较好记的。</p>
-<h1 id="3-常用结构快捷输入"><a href="#3-常用结构快捷输入" class="headerlink" title="3. 常用结构快捷输入"></a>3. 常用结构快捷输入</h1><p>接下来一些常用的最费鼠标的各种结构（剩下一些用到的时候再来补充，更详细的可以参考帖子开头给的参考链接）：</p>
-<p><img src="/images/WordFormulaStructures.png" alt="img"></p>
-<h2 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h2><ul>
-<li><code>a/b</code> $\rightarrow$ $\frac{a}{b}$</li>
-<li><code>a\sdiv b</code> $\rightarrow$ $a/b$</li>
-<li><code>\partial a/\partial b</code> $\rightarrow$ $\frac{\partial a}{\partial b}$</li>
-<li><code>\Delta a/\Delta b</code> $\rightarrow$ $\frac{\Delta a}{\Delta b}$</li>
-</ul>
-<h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><ul>
-<li><code>a^b</code> $\rightarrow$ $a^b$</li>
-<li><code>a_b</code> $\rightarrow$ $a_b$</li>
-<li><code>a_b^c</code> $\rightarrow$ $a_b^c$</li>
-<li><code>(_c^b)a</code> $\rightarrow$ $_c^ba$</li>
-</ul>
-<h2 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h2><ul>
-<li><code>\sqrt a</code> $\rightarrow$ $\sqrt a$</li>
-<li><code>\sqrt (b&amp;a)</code> $\rightarrow$ $\sqrt[b]{a}$</li>
-<li><code>\cbrt a</code> $\rightarrow$ $\sqrt[3]{a}$</li>
-</ul>
-<h2 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h2><ul>
-<li><code>\int \of a</code> $\rightarrow$ $\int{a}$</li>
-<li><code>\iint \of a</code> $\rightarrow$ $\iint{a}$</li>
-<li><code>\int^b_c a</code> $\rightarrow$ $\int^b_c{a}$</li>
-</ul>
-<h2 id="大型运算符"><a href="#大型运算符" class="headerlink" title="大型运算符"></a>大型运算符</h2><h2 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h2><p>输入对应的括号后点空格</p>
-<ul>
-<li><code>(a+b)</code> $\rightarrow$ $(a+b)$</li>
-<li><code>{a\times [b\times (c+d)]}</code> $\rightarrow$ ${a\times[b\times(c+d)]}$</li>
-</ul>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h2 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h2><ul>
-<li><code>a\dot</code> $\rightarrow$ $\dot{a}$</li>
-<li><code>a\ddot</code> $\rightarrow$ $\ddot{a}$</li>
-<li><code>a\hat</code> $\rightarrow$ $\hat{a}$</li>
-<li><code>a\tilde</code> $\rightarrow$ $\tilde{a}$</li>
-</ul>
-<h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><ul>
-<li><code>\matrix (a&amp;b@c&amp;d)</code> $\rightarrow$ <script type="math/tex">\matrix{a&b \\ c&d}</script></li>
-</ul>
-<h1 id="4-自动编号"><a href="#4-自动编号" class="headerlink" title="4. 自动编号"></a>4. 自动编号</h1><p>以前公式自动编号我都是用一个表格，左边放公式，右边放编号，整体效果还行但还是不够完美，后来发现其实Word的公式有带编号的格式。</p>
-<p><strong>关键方法：在公式右边输入<code>#()</code>后按回车（这里必须回车，空格不行），随后在格式化后的括号中插入自动编号即可。</strong></p>
-<p>编号格式化之后的效果如下图：</p>
-<p><img src="/images/WordFormulaAutoNumbering.png" alt="img"></p>
-<p>然后在括号中<strong>插入-文档部件-域-编号-AutoNum-1,2,3</strong>即可，其他公式直接复制这个编号过去，文档中的公式即实现了自动编号。</p>
-<p><img src="/images/WordFormulaAutoNumbering-InsertNum.png" alt="img"></p>
-<blockquote>
-<p>为了写这篇帖子还把Markdown的公式过了一遍，，，感觉一些较为简单的公式还是Word稍微方便一些😁</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>c++ coding</category>
-      </categories>
-      <tags>
-        <tag>office</tag>
-        <tag>word</tag>
-        <tag>公式</tag>
-        <tag>排版</tag>
       </tags>
   </entry>
 </search>
