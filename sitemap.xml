@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://brighthammer.github.io/404.html</loc>
+    
+    <lastmod>2021-03-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/2021/02/04/Ubuntu%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E8%B8%8F%E5%9D%91%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2021-02-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://brighthammer.github.io/2021/01/11/Windows%20%E6%B8%85%E7%90%86C%E7%9B%98%20%E9%87%8A%E6%94%BE%E7%A9%BA%E9%97%B4%20%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/</loc>
     
     <lastmod>2021-01-11</lastmod>
@@ -11,54 +25,12 @@
   <url>
     <loc>https://brighthammer.github.io/2020/07/26/office-%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</loc>
     
-    <lastmod>2020-07-27</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://brighthammer.github.io/tags/index.html</loc>
-    
-    <lastmod>2020-05-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://brighthammer.github.io/categories/index.html</loc>
-    
-    <lastmod>2020-05-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://brighthammer.github.io/about/index.html</loc>
-    
-    <lastmod>2020-05-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://brighthammer.github.io/2020/02/07/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95%E5%B8%96/</loc>
-    
-    <lastmod>2020-05-11</lastmod>
+    <lastmod>2020-07-26</lastmod>
     
   </url>
   
   <url>
     <loc>https://brighthammer.github.io/2020/05/11/hello-world/</loc>
-    
-    <lastmod>2020-05-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://brighthammer.github.io/2020/02/02/C-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E6%B1%87%E6%80%BB-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99-%E8%AE%A1%E6%97%B6-%E9%9A%8F%E6%9C%BA%E6%95%B0/</loc>
-    
-    <lastmod>2020-05-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://brighthammer.github.io/404.html</loc>
     
     <lastmod>2020-05-11</lastmod>
     
@@ -71,10 +43,45 @@
     
   </url>
   
+  <url>
+    <loc>https://brighthammer.github.io/2020/02/07/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95%E5%B8%96/</loc>
+    
+    <lastmod>2020-02-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/tags/index.html</loc>
+    
+    <lastmod>2020-02-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/categories/index.html</loc>
+    
+    <lastmod>2020-02-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/about/index.html</loc>
+    
+    <lastmod>2020-02-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/2020/02/02/C-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E6%B1%87%E6%80%BB-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99-%E8%AE%A1%E6%97%B6-%E9%9A%8F%E6%9C%BA%E6%95%B0/</loc>
+    
+    <lastmod>2020-02-02</lastmod>
+    
+  </url>
+  
 
   <url>
     <loc>https://brighthammer.github.io/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -82,91 +89,98 @@
   
   <url>
     <loc>https://brighthammer.github.io/tags/c/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brighthammer.github.io/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brighthammer.github.io/tags/%E8%AE%A1%E6%97%B6/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brighthammer.github.io/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://brighthammer.github.io/tags/Example/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <loc>https://brighthammer.github.io/tags/Ubuntu-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brighthammer.github.io/tags/Ubuntu/</loc>
-    <lastmod>2021-01-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brighthammer.github.io/tags/test/</loc>
-    <lastmod>2021-01-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brighthammer.github.io/tags/office/</loc>
-    <lastmod>2021-01-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brighthammer.github.io/tags/word/</loc>
-    <lastmod>2021-01-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brighthammer.github.io/tags/%E5%85%AC%E5%BC%8F/</loc>
-    <lastmod>2021-01-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brighthammer.github.io/tags/%E6%8E%92%E7%89%88/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brighthammer.github.io/tags/Windows/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brighthammer.github.io/tags/%E5%9E%83%E5%9C%BE%E6%B8%85%E7%90%86/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-03-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/tags/Example/</loc>
+    <lastmod>2021-03-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/tags/test/</loc>
+    <lastmod>2021-03-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/tags/office/</loc>
+    <lastmod>2021-03-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/tags/word/</loc>
+    <lastmod>2021-03-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/tags/%E5%85%AC%E5%BC%8F/</loc>
+    <lastmod>2021-03-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/tags/%E6%8E%92%E7%89%88/</loc>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -175,21 +189,21 @@
   
   <url>
     <loc>https://brighthammer.github.io/categories/c-coding/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brighthammer.github.io/categories/Ubuntu/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://brighthammer.github.io/categories/test/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
