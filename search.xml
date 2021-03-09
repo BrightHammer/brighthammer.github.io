@@ -19,7 +19,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu环境配置踏坑记录</title>
+    <title>Ubuntu深度学习环境配置踏坑记录</title>
     <url>/2021/02/04/Ubuntu%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E8%B8%8F%E5%9D%91%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<blockquote>
 <p>mark一下配置工作站环境中遇到的坑<br><a id="more"></a></p>
@@ -52,6 +52,34 @@
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+<h3 id="2-Conda环境问题"><a href="#2-Conda环境问题" class="headerlink" title="2 Conda环境问题"></a>2 Conda环境问题</h3><ul>
+<li><p>CondaHTTPError: HTTP 000 CONNECTION FAILED for url</p>
+<ul>
+<li>貌似是源的问题<ul>
+<li>恢复原始源，直接删除了.condarc</li>
+<li>更换中科大源</li>
+<li>源里边的https改为http（看到说可行，没尝试）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>The environment is inconsistent, please check the package plan carefully</p>
+<ul>
+<li><p>升级所有包</p>
+<p><code>conda update --all</code></p>
+</li>
+<li><p>不行就用下面这个，会安装很多包，没搞清楚是为什么，之后再卸掉numpy能删掉很多乱七八糟的包</p>
+<p><code>conda install anaconda</code></p>
+</li>
+</ul>
+</li>
+<li><p>有莫名其妙问题的时候升级一下conda</p>
+<p><code>conda update -n base conda</code></p>
+</li>
+<li><p><strong>清理没用的包</strong></p>
+<p><code>conda clean -p      //删除没有用的包</code><br><code>conda clean -t      //tar打包</code><br><code>conda clean -y -a //删除所有的安装包及cache</code></p>
 </li>
 </ul>
 ]]></content>

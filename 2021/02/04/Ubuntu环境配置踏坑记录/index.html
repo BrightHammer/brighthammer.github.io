@@ -26,7 +26,7 @@
 
   <meta name="description" content="mark一下配置工作站环境中遇到的坑">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu环境配置踏坑记录">
+<meta property="og:title" content="Ubuntu深度学习环境配置踏坑记录">
 <meta property="og:url" content="https://brighthammer.github.io/2021/02/04/Ubuntu%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E8%B8%8F%E5%9D%91%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="Bright Hammer">
 <meta property="og:description" content="mark一下配置工作站环境中遇到的坑">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>Ubuntu环境配置踏坑记录 | Bright Hammer</title>
+  <title>Ubuntu深度学习环境配置踏坑记录 | Bright Hammer</title>
   
 
 
@@ -206,7 +206,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          Ubuntu环境配置踏坑记录
+          Ubuntu深度学习环境配置踏坑记录
         </h2>
 
         <div class="post-meta">
@@ -244,7 +244,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>496</span>
+              <span>875</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -296,6 +296,34 @@
 </ul>
 </li>
 </ul>
+<h3 id="2-Conda环境问题"><a href="#2-Conda环境问题" class="headerlink" title="2 Conda环境问题"></a>2 Conda环境问题</h3><ul>
+<li><p>CondaHTTPError: HTTP 000 CONNECTION FAILED for url</p>
+<ul>
+<li>貌似是源的问题<ul>
+<li>恢复原始源，直接删除了.condarc</li>
+<li>更换中科大源</li>
+<li>源里边的https改为http（看到说可行，没尝试）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>The environment is inconsistent, please check the package plan carefully</p>
+<ul>
+<li><p>升级所有包</p>
+<p><code>conda update --all</code></p>
+</li>
+<li><p>不行就用下面这个，会安装很多包，没搞清楚是为什么，之后再卸掉numpy能删掉很多乱七八糟的包</p>
+<p><code>conda install anaconda</code></p>
+</li>
+</ul>
+</li>
+<li><p>有莫名其妙问题的时候升级一下conda</p>
+<p><code>conda update -n base conda</code></p>
+</li>
+<li><p><strong>清理没用的包</strong></p>
+<p><code>conda clean -p      //删除没有用的包</code><br><code>conda clean -t      //tar打包</code><br><code>conda clean -y -a //删除所有的安装包及cache</code></p>
+</li>
+</ul>
 
     </div>
 
@@ -321,7 +349,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://brighthammer.github.io/2021/02/04/Ubuntu%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E8%B8%8F%E5%9D%91%E8%AE%B0%E5%BD%95/" title="Ubuntu环境配置踏坑记录">https://brighthammer.github.io/2021/02/04/Ubuntu环境配置踏坑记录/</a>
+    <a href="https://brighthammer.github.io/2021/02/04/Ubuntu%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E8%B8%8F%E5%9D%91%E8%AE%B0%E5%BD%95/" title="Ubuntu深度学习环境配置踏坑记录">https://brighthammer.github.io/2021/02/04/Ubuntu环境配置踏坑记录/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -405,7 +433,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8-amp-CUDA"><span class="nav-text">显卡驱动 &amp; CUDA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">1 显卡驱动常见问题</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8-amp-CUDA"><span class="nav-text">显卡驱动 &amp; CUDA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">1 显卡驱动常见问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Conda%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98"><span class="nav-text">2 Conda环境问题</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -481,12 +509,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">11k</span>
+    <span title="站点总字数">12k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">10 分钟</span>
+    <span title="站点阅读时长">11 分钟</span>
 </div>
 
 <div id="days"></div>
