@@ -200,13 +200,6 @@
   </url>
   
   <url>
-    <loc>https://brighthammer.github.io/tags/test/</loc>
-    <lastmod>2021-05-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://brighthammer.github.io/tags/office/</loc>
     <lastmod>2021-05-24</lastmod>
     <changefreq>daily</changefreq>
@@ -229,6 +222,13 @@
   
   <url>
     <loc>https://brighthammer.github.io/tags/%E6%8E%92%E7%89%88/</loc>
+    <lastmod>2021-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brighthammer.github.io/tags/test/</loc>
     <lastmod>2021-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
