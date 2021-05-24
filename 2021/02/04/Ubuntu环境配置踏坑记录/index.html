@@ -4,7 +4,7 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.0.2">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -80,7 +80,9 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Bright Hammer" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="Bright Hammer" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -244,7 +246,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>875</span>
+              <span>1.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -264,7 +266,7 @@
 
       
         <blockquote>
-<p>mark一下配置工作站环境中遇到的坑<br><a id="more"></a></p>
+<p>mark一下配置工作站环境中遇到的坑<br><span id="more"></span></p>
 </blockquote>
 <h1 id="显卡驱动-amp-CUDA"><a href="#显卡驱动-amp-CUDA" class="headerlink" title="显卡驱动 &amp; CUDA"></a>显卡驱动 &amp; CUDA</h1><h3 id="1-显卡驱动常见问题"><a href="#1-显卡驱动常见问题" class="headerlink" title="1 显卡驱动常见问题"></a>1 显卡驱动常见问题</h3><ul>
 <li><p>nvidia-smi报错</p>
@@ -324,6 +326,14 @@
 <p><code>conda clean -p      //删除没有用的包</code><br><code>conda clean -t      //tar打包</code><br><code>conda clean -y -a //删除所有的安装包及cache</code></p>
 </li>
 </ul>
+<h3 id="3-开机自启动"><a href="#3-开机自启动" class="headerlink" title="3 开机自启动"></a>3 开机自启动</h3><ul>
+<li><p><strong>在rc.local文件中添加启动脚本</strong></p>
+<ul>
+<li>rc.local脚本是一个ubuntu开机后会自动执行的脚本，我们可以在该脚本内添加命令行指令。该脚本位于/etc/路径下，需要root权限才能修改。<br>该脚本具体格式如下：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh -e</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># rc.local</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This script is executed at the end of each multiuser runlevel.</span></span><br><span class="line"><span class="comment"># Make sure that the script will &quot;exit 0&quot; on success or any other</span></span><br><span class="line"><span class="comment"># value on error.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># In order to enable or disable this script just change the execution</span></span><br><span class="line"><span class="comment"># bits.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># By default this script does nothing.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#任务脚本</span></span><br><span class="line"><span class="comment">#自动执行启动脚本</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;看到这行字，说明添加自启动脚本成功。2021-05-12&quot;</span> &gt; /usr/<span class="built_in">local</span>/test.log</span><br><span class="line">/home/user/start.sh</span><br><span class="line"></span><br><span class="line"><span class="comment">#打开mate终端，并在其中运行脚本</span></span><br><span class="line">mate-terminal -x /home/myname/mysetup.sh</span><br><span class="line"></span><br><span class="line"><span class="comment">#任务脚本</span></span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
     </div>
 
@@ -373,7 +383,10 @@
     <a href="/2021/01/11/Windows%20%E6%B8%85%E7%90%86C%E7%9B%98%20%E9%87%8A%E6%94%BE%E7%A9%BA%E9%97%B4%20%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/" rel="prev" title="Windows 清理C盘 释放空间 方法汇总">
       <i class="fa fa-chevron-left"></i> Windows 清理C盘 释放空间 方法汇总
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/19/U-Net%E7%BD%91%E7%BB%9C%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86-%E8%B8%8F%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="next" title="U-Net网络训练自己的数据集-踏坑记录">
+      U-Net网络训练自己的数据集-踏坑记录 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -433,7 +446,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8-amp-CUDA"><span class="nav-text">显卡驱动 &amp; CUDA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">1 显卡驱动常见问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Conda%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98"><span class="nav-text">2 Conda环境问题</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8-amp-CUDA"><span class="nav-text">显卡驱动 &amp; CUDA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">1 显卡驱动常见问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Conda%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98"><span class="nav-text">2 Conda环境问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8"><span class="nav-text">3 开机自启动</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -451,20 +464,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -509,12 +522,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">19k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">17 分钟</span>
 </div>
 
 <div id="days"></div>
