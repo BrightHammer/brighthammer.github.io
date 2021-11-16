@@ -1227,7 +1227,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fbff0e;
+  background: #6b3959;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1598,6 +1598,15 @@ pre .javascript .function {
   line-height: 1;
   margin: -20px auto 15px;
   text-align: center;
+}
+.post-body a:not(.btn) {
+  color: #428bca;
+  border-bottom: none;
+}
+.post-body a:not(.btn):hover {
+  color: #ff991f;
+  font-weight: normal;
+  text-decoration: underline;
 }
 .post-sticky-flag {
   display: inline-block;

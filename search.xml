@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/2020/05/11/hello-world/</url>
+    <url>/2021/03/12/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <span id="more"></span>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
@@ -16,6 +16,39 @@
 ]]></content>
       <tags>
         <tag>Example</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu使用rsync同步文件到Windows</title>
+    <url>/2021/11/13/Ubuntu%E4%BD%BF%E7%94%A8rsync%E5%90%8C%E6%AD%A5%E6%96%87%E4%BB%B6%E5%88%B0Windows/</url>
+    <content><![CDATA[<blockquote>
+<p>通过Rsync主动同步Ubuntu文件到Windows<br><span id="more"></span></p>
+</blockquote>
+<h2 id="Ubuntu服务端配置方法"><a href="#Ubuntu服务端配置方法" class="headerlink" title="Ubuntu服务端配置方法"></a>Ubuntu服务端配置方法</h2><ul>
+<li>Ubuntu一般都自带rsync，没有的话可以用apt安装一下</li>
+<li>接着新建一个文件夹，用来放配置文件等，为了省得总是sudo，可以直接放在home/usr下面</li>
+<li>新建rsyncd.conf 配置文件, 内容如下：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>其中：<ul>
+<li>[test]后面为子模块，可以设置多个，以对应不同的同步目录</li>
+<li>rsyncd.secrets为密码的文件，内容为：“用户名:密码”</li>
+<li>注意，一定要运行<code>chmod 600 rsyncd.secrets</code>修改权限，密码文件必须只有本用户可以修改，否则程序运行会报错</li>
+</ul>
+</li>
+</ul>
+<h2 id="Windows客户端配置方法"><a href="#Windows客户端配置方法" class="headerlink" title="Windows客户端配置方法"></a>Windows客户端配置方法</h2><ul>
+<li>下载cwrsync软件，如：<a href="http://www.7xdown.com/downinfo/123802.html">http://www.7xdown.com/downinfo/123802.html</a></li>
+</ul>
+<h2 id="配置好后的使用方法"><a href="#配置好后的使用方法" class="headerlink" title="配置好后的使用方法"></a>配置好后的使用方法</h2><ul>
+<li>修改rsync.conf，增加子模块，修改”path”为需要同步的目录</li>
+<li>Ubuntu端运行<code>rsync --daemon --config=rsync.conf</code>重新启动服务</li>
+<li>Windows端运行：<br><code>rsync.exe -vzrtopgu --progress --port=端口 --delete 用户名@IP地址::模块名称 /cygdrive/E/路径</code></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu 环境配置</tag>
       </tags>
   </entry>
   <entry>
@@ -106,6 +139,11 @@
 </li>
 <li><p>有莫名其妙问题的时候升级一下conda</p>
 <p><code>conda update -n base conda</code></p>
+</li>
+<li><p>pkg_resources.DistributionNotFound: The ‘tensorboard-data-server<0.7.0,>=0.6.0’ distribution was not found and is required by tensorboard</p>
+<ul>
+<li>升级所有包，可能只需要升级tensorboard</li>
+</ul>
 </li>
 <li><p><strong>清理没用的包</strong></p>
 <p><code>conda clean -p      //删除没有用的包</code><br><code>conda clean -t      //tar打包</code><br><code>conda clean -y -a //删除所有的安装包及cache</code></p>
@@ -347,6 +385,9 @@
 </li>
 <li><p>创建文件夹快捷方式<br><code>ln -s /home/panda/Programs/ ~/桌面/Programs</code></p>
 </li>
+<li><p>统计文件夹下文件数量</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -l | grep <span class="string">&quot;^-&quot;</span> | wc -l     <span class="comment"># 统计当前目录下文件的个数（不包括目录）</span></span><br><span class="line">ls -lR | grep <span class="string">&quot;^-&quot;</span> | wc -l    <span class="comment"># 统计当前目录下文件的个数（包括子目录）</span></span><br><span class="line">ls -lR | grep <span class="string">&quot;^d&quot;</span> | wc -l    <span class="comment"># 查看某目录下文件夹(目录)的个数（包括子目录）</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>压缩解压</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 仅打包，并非压缩</span></span><br><span class="line">tar -xvf FileName.tar         <span class="comment"># 解包</span></span><br><span class="line">tar -cvf FileName.tar DirName <span class="comment"># 将DirName和其下所有文件（夹）打包</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># .gz</span></span><br><span class="line">gunzip FileName.gz  <span class="comment"># 解压1</span></span><br><span class="line">gzip -d FileName.gz <span class="comment"># 解压2</span></span><br><span class="line">gzip FileName       <span class="comment"># 压缩，只能压缩文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># tar.xz</span></span><br><span class="line">tar -xvf FileName.tar.xz   <span class="comment"># 解压1</span></span><br><span class="line">tar -xvJf FileName.tar.xz  <span class="comment"># 解压2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># .tar.gz 和 .tgz</span></span><br><span class="line">tar -zxvf FileName.tar.gz               <span class="comment"># 解压</span></span><br><span class="line">tar -zcvf FileName.tar.gz DirName       <span class="comment"># 将DirName和其下所有文件（夹）压缩</span></span><br><span class="line">tar -C DesDirName -zxvf FileName.tar.gz <span class="comment"># 解压到目标路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 感觉.zip占用空间比.tar.gz大</span></span><br><span class="line">unzip FileName.zip          <span class="comment"># 解压</span></span><br><span class="line">zip FileName.zip DirName    <span class="comment"># 将DirName本身压缩</span></span><br><span class="line">zip -r FileName.zip DirName <span class="comment"># 压缩，递归处理，将指定目录下的所有文件和子目录一并压缩</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># mac和linux并没有自带rar，需要去下载</span></span><br><span class="line">rar x FileName.rar      <span class="comment"># 解压</span></span><br><span class="line">rar a FileName.rar DirName <span class="comment"># 压缩</span></span><br></pre></td></tr></table></figure>
 <h1 id="权限相关"><a href="#权限相关" class="headerlink" title="权限相关"></a>权限相关</h1></li>
@@ -369,10 +410,23 @@
 </li>
 </ul>
 <h1 id="环境-软件相关"><a href="#环境-软件相关" class="headerlink" title="环境/软件相关"></a>环境/软件相关</h1><ul>
-<li>查看opencv版本<br><code>pkg-config --modversion opencv</code><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1></li>
+<li>查看opencv版本<br><code>pkg-config --modversion opencv</code></li>
+<li><p>ssh后台运行程序</p>
+<ul>
+<li>nohub: no hang up</li>
+<li>2&gt;&amp;1: 将标准出错重定向到标准输出</li>
+<li>&amp;: 后台运行</li>
+</ul>
+<p><code>nohup command &gt; myout.file 2&gt;&amp;1 &amp;</code></p>
+</li>
+</ul>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
 <li>刷新dns的缓存：<br><code>sudo /etc/init.d/nscd restart</code><br>如果发现提示命令找不到：sudo: /etc/init.d/nscd: command not found<br>需要先安装nscd包：<br><code>sudo apt-get install nscd</code></li>
 <li>重启网络：<br><code>sudo /etc/init.d/networking restart</code></li>
-<li>修改grub参数并更新grub<br><code>sudo vim /etc/default/grub</code><br><code>sudo update-grub</code></li>
+<li><p>修改grub参数并更新grub<br><code>sudo vim /etc/default/grub</code><br><code>sudo update-grub</code></p>
+</li>
+<li><p>设置ssh时的终端颜色<br><code>tput colors</code> 可以查看当前色彩深度<br>在.bashrc中加入 <code>export TERM=&#39;xterm-256color</code> 可以设置为256色</p>
+</li>
 </ul>
 <div class="note default">
             <p>Ubunt&amp; Vim 常用命令汇总壁纸 </p>
@@ -539,6 +593,107 @@
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">Dist d; <span class="comment">//默认构造函数</span></span><br><span class="line"><span class="function">Dist <span class="title">d</span><span class="params">(min, max)</span></span>; <span class="comment">//为d指定范围</span></span><br><span class="line"><span class="built_in">d</span>(e) <span class="comment">//e是一个随机数引擎对象</span></span><br><span class="line">d.<span class="built_in">min</span>() <span class="comment">//返回d(e)所能生成的最小值和最大值</span></span><br><span class="line">d.<span class="built_in">max</span>()</span><br><span class="line">d.<span class="built_in">reset</span>(); <span class="comment">//重置d的状态，使得随后对d的使用不依赖于d已经生成的值</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>c++ coding</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>文件读写</tag>
+        <tag>计时</tag>
+        <tag>随机数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python常忘操作</title>
+    <url>/2020/02/02/Python%E5%B8%B8%E5%BF%98%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<blockquote>
+<p>Python经常忘记的操作：文件和文件夹操作 嵌套语句<br><span id="more"></span></p>
+</blockquote>
+<h1 id="1、文件和文件夹操作"><a href="#1、文件和文件夹操作" class="headerlink" title="1、文件和文件夹操作"></a>1、文件和文件夹操作</h1><p><strong>参考链接：</strong><a href="https://www.runoob.com/python3/python3-tutorial.html">Python 3 菜鸟教程</a></p>
+<ul>
+<li>判断路径是否存在</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> tmpdir <span class="keyword">in</span> [mask_dir, viz_dir]:</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(tmpdir):</span><br><span class="line">        os.mkdir(tmpdir)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>常用构造函数：</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string str;        <span class="comment">//生成一个空字符串</span></span><br><span class="line"><span class="function">string <span class="title">str</span> <span class="params">(<span class="string">&quot;ABC&quot;</span>)</span>  <span class="comment">//等价于 str=&quot;ABC&quot;&lt;br&gt;</span></span></span><br><span class="line"><span class="function">string <span class="title">str</span> <span class="params">(<span class="string">&quot;ABC&quot;</span>, strlen)</span>  <span class="comment">// 将&quot;ABC&quot;存到str里,最多存储前strlen个字节</span></span></span><br><span class="line"><span class="function">string <span class="title">s</span><span class="params">(<span class="string">&quot;ABC&quot;</span>,stridx,strlen)</span>   <span class="comment">//将&quot;ABC&quot;的stridx位置,做为字符串开头,存到str里.且最多存储strlen个字节.</span></span></span><br><span class="line"><span class="function">string <span class="title">s</span><span class="params">(strlen, <span class="string">&#x27;A&#x27;</span>)</span>  <span class="comment">//存储strlen个&#x27;A&#x27;到str里</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>常用成员函数：</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">str1.<span class="built_in">assign</span>(<span class="string">&quot;ABC&quot;</span>);　　　　　　　　<span class="comment">//清空string串,然后设置string串为&quot;ABC&quot;</span></span><br><span class="line">str1.<span class="built_in">length</span>()；                 <span class="comment">//获取字符串长度</span></span><br><span class="line">str1.<span class="built_in">size</span>();　　　　　　　　　　　 <span class="comment">//获取字符串数量,等价于length()</span></span><br><span class="line">str1.<span class="built_in">capacity</span>();　　　　　　　　  <span class="comment">//获取容量,容量包含了当前string里不必增加内存就能使用的字符数</span></span><br><span class="line">str1.<span class="built_in">resize</span>(<span class="number">10</span>);　　　　　　     <span class="comment">//表示设置当前string里的串大小,若设置大小大于当前串长度,则用字符\0来填充多余的.</span></span><br><span class="line">str1.<span class="built_in">resize</span>(<span class="number">10</span>,<span class="keyword">char</span> c);　　　　 <span class="comment">//设置串大小，若设置大小大于当前串长度,则用字符c来填充多余的</span></span><br><span class="line">str1.<span class="built_in">reserve</span>(<span class="number">10</span>);　　　　　　　　　<span class="comment">//设置string里的串容量,不会填充数据.</span></span><br><span class="line">str1.<span class="built_in">swap</span>(str2);        　　    <span class="comment">//替换str1 和 str2 的字符串</span></span><br><span class="line">str1.<span class="built_in">puch_back</span> (<span class="string">&#x27;A&#x27;</span>);    　　<span class="comment">//在str1末尾添加一个&#x27;A&#x27;字符,参数必须是字符形式</span></span><br><span class="line">str1.<span class="built_in">append</span> (<span class="string">&quot;ABC&quot;</span>);     　　<span class="comment">//在str1末尾添加一个&quot;ABC&quot;字符串,参数必须是字符串形式</span></span><br><span class="line">str1.<span class="built_in">insert</span> (<span class="number">2</span>,<span class="string">&quot;ABC&quot;</span>);       <span class="comment">//在str1的下标为2的位置,插入&quot;ABC&quot;</span></span><br><span class="line">str1.<span class="built_in">erase</span>(<span class="number">2</span>);         　　　　<span class="comment">//删除下标为2的位置,比如: &quot;ABCD&quot; --&gt; &quot;AB&quot;</span></span><br><span class="line">str1.<span class="built_in">erase</span>(<span class="number">2</span>,<span class="number">1</span>);              <span class="comment">//从下标为2的位置删除1个,比如: &quot;ABCD&quot;  --&gt; &quot;ABD&quot;</span></span><br><span class="line">str1.<span class="built_in">clear</span>();           　　 <span class="comment">//删除所有</span></span><br><span class="line">str1.<span class="built_in">replace</span>(<span class="number">2</span>,<span class="number">4</span>, <span class="string">&quot;ABCD&quot;</span>); <span class="comment">//从下标为2的位置,替换4个字节,为&quot;ABCD&quot;</span></span><br><span class="line">str1.<span class="built_in">empty</span>();         　　 <span class="comment">//判断为空, 为空返回true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>与char*相互转换：</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">str.<span class="built_in">c_str</span>();        <span class="comment">//string转为char*</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> *st = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">string st1 = st;</span><br><span class="line"><span class="function">string <span class="title">st2</span><span class="params">(st, st + strlen(st))</span></span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>与数字的转换：</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sstream&gt;</span>&gt;</span></span><br><span class="line"><span class="comment">//-----------string转为数字：</span></span><br><span class="line"><span class="function">istringstream <span class="title">iss</span> <span class="params">(<span class="string">&quot;123.5&quot;</span>)</span></span>;    <span class="comment">//定义对象iss,初始化为&quot;123.5&quot; , </span></span><br><span class="line"><span class="comment">//等价于:</span></span><br><span class="line"><span class="comment">//istringstream iss;</span></span><br><span class="line"><span class="comment">//iss.str(&quot;123.5&quot;);                 //设置对象iss为&quot;123.5&quot; ,</span></span><br><span class="line"><span class="keyword">double</span> num;</span><br><span class="line"> <span class="keyword">if</span>(iss&gt;&gt;num)                 <span class="comment">//通过调用iss.operator &gt;&gt;(num), 将&quot;123.5&quot;转为数字,并返回bool类型变量</span></span><br><span class="line">    cout&lt;&lt;num &lt;&lt; endl;</span><br><span class="line"><span class="comment">//也可以通过临时对象转换：</span></span><br><span class="line">string str=<span class="string">&quot;123.5&quot;</span>;</span><br><span class="line"><span class="keyword">double</span> num;</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">istringstream</span>(str)&gt;&gt;num)        <span class="comment">//通过临时对象,来将str转为数字</span></span><br><span class="line">	cout&lt;&lt;num&lt;&lt;endl;</span><br><span class="line"><span class="comment">//或者将第3行,写为宏:</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TO_NUM(str,num)     (istringstream(str)&gt;&gt;num)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//-----------数字转为string</span></span><br><span class="line">ostringstream oss;</span><br><span class="line">oss &lt;&lt;<span class="number">123.5</span>;                   <span class="comment">//相当于调用: oss.str(&quot;123.5&quot;);</span></span><br><span class="line">string str= oss.<span class="built_in">str</span>() ;</span><br><span class="line"><span class="comment">//也可以通过宏,这样写:</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TO_STRING(num)     ( ((ostringstream&amp;)(ostringstream()&lt;&lt;num)).str() )</span></span><br><span class="line"><span class="keyword">double</span> num=<span class="number">123.5</span>;</span><br><span class="line">string str= <span class="built_in">TO_STRING</span>(<span class="number">123.5</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="2、文件读写"><a href="#2、文件读写" class="headerlink" title="2、文件读写"></a>2、文件读写</h1><ul>
+<li><strong>参考链接：</strong><br><a href="https://blog.csdn.net/u011574296/article/details/72956446">Windows下对文件夹下所有图片批量重命名</a><br><a href="https://blog.csdn.net/guyuealian/article/details/77981953">C++读取文件夹中所有文件的路径，包含子文件夹</a></li>
+</ul>
+<h2 id="文本文件读取与写入"><a href="#文本文件读取与写入" class="headerlink" title="文本文件读取与写入"></a>文本文件读取与写入</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> count;</span><br><span class="line">fstream inFile, outFile;</span><br><span class="line"><span class="keyword">if</span>( (_access( <span class="string">&quot;in.txt&quot;</span>, <span class="number">0</span> )) != <span class="number">-1</span> )  </span><br><span class="line">&#123;  </span><br><span class="line">	<span class="built_in">printf_s</span>( <span class="string">&quot;File crt_ACCESS.C exists.\n&quot;</span> );</span><br><span class="line">	inFile.<span class="built_in">open</span>(<span class="string">&quot;in.txt&quot;</span>, ios::in | ios::binary);<span class="comment">//二进制读取</span></span><br><span class="line">&#125;</span><br><span class="line">outFile.<span class="built_in">open</span>(<span class="string">&quot;out.txt&quot;</span>, ios::out | ios::binary);<span class="comment">//二进制写入</span></span><br><span class="line">inFile &gt;&gt; count;</span><br><span class="line">outFile &lt;&lt; count;</span><br><span class="line">inFile.<span class="built_in">close</span>();</span><br><span class="line">outFile.<span class="built_in">close</span>();</span><br></pre></td></tr></table></figure>
+<h2 id="文件夹相关操作"><a href="#文件夹相关操作" class="headerlink" title="文件夹相关操作"></a>文件夹相关操作</h2><ul>
+<li>判断文件夹是否存在</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;io.h&gt;</span>  <span class="comment">//Win</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;pre name=<span class="string">&quot;code&quot;</span> class=<span class="string">&quot;cpp&quot;</span>&gt;<span class="keyword">int</span> <span class="built_in">access</span>(<span class="keyword">const</span> <span class="keyword">char</span>* _Filename, <span class="keyword">int</span> _AccessMode)</span><br><span class="line">_AccessMode:&#123;</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> R_OK 4 <span class="comment">/* Test for read permission. 读权限*/</span></span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> W_OK 2 <span class="comment">/* Test for write permission. 写权限*/</span></span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> X_OK 1 <span class="comment">/* Test for execute permission. 是否可执行*/</span></span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> F_OK 0 <span class="comment">/* Test for existence. 是否存在*/</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建、删除文件夹</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;direct.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mkdir</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *_Path)</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">rmdir</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *_Path)</span></span></span><br></pre></td></tr></table></figure>
+<p>函数返回0表示成功，返回-1表示失败或不存在</p>
+<h1 id="3、计时函数"><a href="#3、计时函数" class="headerlink" title="3、计时函数"></a>3、计时函数</h1><ul>
+<li>参考链接：<a href="https://www.cnblogs.com/dwdxdy/p/3214905.html">【C/C++】计时函数比较</a></li>
+</ul>
+<h2 id="time"><a href="#time" class="headerlink" title="time()"></a>time()</h2><blockquote>
+<p>time()获取当前的系统时间，返回的结果是一个time_t类型，其实就是一个==大整数==，其值表示从CUT（Coordinated Universal Time）时间1970年1月1日00:00:00（称为UNIX系统的Epoch时间）到当前时刻的秒数。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">time_t</span> start,stop;</span><br><span class="line">    start = <span class="built_in">time</span>(<span class="literal">NULL</span>);</span><br><span class="line">    <span class="built_in">foo</span>();<span class="comment">//dosomething</span></span><br><span class="line">    stop = <span class="built_in">time</span>(<span class="literal">NULL</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Use Time:%ld\n&quot;</span>,(stop-start));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="clock"><a href="#clock" class="headerlink" title="clock()"></a>clock()</h2><blockquote>
+<p>clock()函数返回从“开启这个程序进程”到“程序中调用clock()函数”时之间的CPU时钟计时单元（clock tick）数，在MSDN中称之为挂钟时间（wal-clock）<br>常量CLOCKS_PER_SEC，它用来表示一秒钟会有多少个时钟计时单元。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> dur;</span><br><span class="line">    <span class="keyword">clock_t</span> start,end;</span><br><span class="line">    start = <span class="built_in">clock</span>();</span><br><span class="line">    <span class="built_in">foo</span>();<span class="comment">//dosomething</span></span><br><span class="line">    end = <span class="built_in">clock</span>();</span><br><span class="line">    dur = (<span class="keyword">double</span>)(end - start);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Use Time:%f\n&quot;</span>,(dur/CLOCKS_PER_SEC));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="timeGetTime"><a href="#timeGetTime" class="headerlink" title="timeGetTime()"></a>timeGetTime()</h2><blockquote>
+<p>timeGetTime()函数以毫秒计的系统时间。该时间为从系统开启算起所经过的时间,是windows api。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test3</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    DWORD t1,t2;</span><br><span class="line">    t1 = <span class="built_in">timeGetTime</span>();</span><br><span class="line">    <span class="built_in">foo</span>();<span class="comment">//dosomething</span></span><br><span class="line">    t2 = <span class="built_in">timeGetTime</span>();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Use Time:%f\n&quot;</span>,(t2-t1)*<span class="number">1.0</span>/<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="4、随机数"><a href="#4、随机数" class="headerlink" title="4、随机数"></a>4、随机数</h1><ul>
+<li><strong>参考链接：</strong><a href="http://notes.maxwi.com/2016/04/10/cpp-random/">C++随机数类random的使用</a></li>
+</ul>
+<h2 id="cstdlib中伪随机数"><a href="#cstdlib中伪随机数" class="headerlink" title="cstdlib中伪随机数"></a>cstdlib中伪随机数</h2><p>C语言中通过函数rand和srand来产生伪随机数，这两个函数包含在头文件cstdlib中，其中srand用来产生设置随机数种子，rand每次返回一个当前的种子对应的随机数，这两个函数的声明如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">srand</span><span class="params">(<span class="keyword">unsigned</span> seed)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">rand</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>这两个函数的原型形如：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">int</span> next = <span class="number">1</span>;</span><br><span class="line"><span class="comment">/* rand: return pseudo-random integer on 0..32767 */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">rand</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    next = next * <span class="number">1103515245</span> + <span class="number">12345</span>;</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">unsigned</span> <span class="keyword">int</span>)(next/<span class="number">65536</span>) % <span class="number">32768</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* srand: set seed for rand() */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">srand</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> seed)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    next = seed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>显然rand只能生成整数，需要小数时，只需要跟一个浮点数进行除法即可<br><div class="note info">
+            <p><strong>一个生成[1, 15]的随机数例子：</strong></p>
+          </div></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//random num range is min to max, template function</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="function">T <span class="title">cRandom</span><span class="params">(<span class="keyword">int</span> min, <span class="keyword">int</span> max)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (min + <span class="keyword">static_cast</span>&lt;T&gt;(max * <span class="built_in">rand</span>() / <span class="keyword">static_cast</span>&lt;T&gt;(RAND_MAX + <span class="number">1</span>)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">srand</span>((<span class="keyword">unsigned</span>)<span class="built_in">time</span>(<span class="literal">NULL</span>));</span><br><span class="line">    <span class="comment">//生成10个整数</span></span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;int: &quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">        std::cout &lt;&lt; cRandom&lt;<span class="keyword">int</span>&gt;(<span class="number">1</span>, <span class="number">15</span>) &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="comment">//生成10个小数</span></span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;double: &quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">        std::cout &lt;&lt; cRandom&lt;<span class="keyword">double</span>&gt;(<span class="number">1</span>, <span class="number">15</span>) &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>生成指定范围的随机数表达式：</p>
+<blockquote>
+<ul>
+<li>要取得[a,b)的随机整数，使用(rand() % (b-a))+ a;</li>
+<li>要取得[a,b]的随机整数，使用(rand() % (b-a+1))+ a;</li>
+<li>要取得(a,b]的随机整数，使用(rand() % (b-a))+ a + 1;</li>
+</ul>
+</blockquote>
+<p>通用公式:a + rand() % n；其中的a是起始值，n是整数的范围。</p>
+<blockquote>
+<ul>
+<li>要取得a到b之间的随机整数，另一种表示：a + (int)b * rand() / (RAND_MAX + 1)。</li>
+<li>要取得0～1之间的浮点数，可以使用rand() / double(RAND_MAX)。</li>
+</ul>
+</blockquote>
+<div class="note info">
+            <p><strong>输出15个double类型的随机数的例子：</strong></p>
+          </div>
+<div class="note warning">
+            <p>一个给定的随机数发生器一直会生成相同的随机数序列。一个函数如果定义了局部的随机数发生器，应该将其（包括引擎和分布对象）定义为static的，否则每次调用函数都会生成相同的序列。也就是说定义成static后每次调用还是之前那个发生器，第一次调用产生一批随机数，再次调用将产生接下来的随机数，否则每次调用产生的都是最前面的那些随机数。</p>
+          </div>
+<div class="note warning">
+            <p>依然需要使用time来做为种子产生每个不同时刻都不同的随机序列，但由于time默认返回的是以秒计的时间，所以有可能多次使用的都是相同的种子。</p>
+          </div>
+]]></content>
+      <categories>
+        <category>python coding</category>
       </categories>
       <tags>
         <tag>c++</tag>

@@ -249,14 +249,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
+              <span>1.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -280,6 +280,9 @@
 </li>
 <li><p>创建文件夹快捷方式<br><code>ln -s /home/panda/Programs/ ~/桌面/Programs</code></p>
 </li>
+<li><p>统计文件夹下文件数量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -l | grep <span class="string">&quot;^-&quot;</span> | wc -l     <span class="comment"># 统计当前目录下文件的个数（不包括目录）</span></span><br><span class="line">ls -lR | grep <span class="string">&quot;^-&quot;</span> | wc -l    <span class="comment"># 统计当前目录下文件的个数（包括子目录）</span></span><br><span class="line">ls -lR | grep <span class="string">&quot;^d&quot;</span> | wc -l    <span class="comment"># 查看某目录下文件夹(目录)的个数（包括子目录）</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>压缩解压</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 仅打包，并非压缩</span></span><br><span class="line">tar -xvf FileName.tar         <span class="comment"># 解包</span></span><br><span class="line">tar -cvf FileName.tar DirName <span class="comment"># 将DirName和其下所有文件（夹）打包</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># .gz</span></span><br><span class="line">gunzip FileName.gz  <span class="comment"># 解压1</span></span><br><span class="line">gzip -d FileName.gz <span class="comment"># 解压2</span></span><br><span class="line">gzip FileName       <span class="comment"># 压缩，只能压缩文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># tar.xz</span></span><br><span class="line">tar -xvf FileName.tar.xz   <span class="comment"># 解压1</span></span><br><span class="line">tar -xvJf FileName.tar.xz  <span class="comment"># 解压2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># .tar.gz 和 .tgz</span></span><br><span class="line">tar -zxvf FileName.tar.gz               <span class="comment"># 解压</span></span><br><span class="line">tar -zcvf FileName.tar.gz DirName       <span class="comment"># 将DirName和其下所有文件（夹）压缩</span></span><br><span class="line">tar -C DesDirName -zxvf FileName.tar.gz <span class="comment"># 解压到目标路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 感觉.zip占用空间比.tar.gz大</span></span><br><span class="line">unzip FileName.zip          <span class="comment"># 解压</span></span><br><span class="line">zip FileName.zip DirName    <span class="comment"># 将DirName本身压缩</span></span><br><span class="line">zip -r FileName.zip DirName <span class="comment"># 压缩，递归处理，将指定目录下的所有文件和子目录一并压缩</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># mac和linux并没有自带rar，需要去下载</span></span><br><span class="line">rar x FileName.rar      <span class="comment"># 解压</span></span><br><span class="line">rar a FileName.rar DirName <span class="comment"># 压缩</span></span><br></pre></td></tr></table></figure>
 <h1 id="权限相关"><a href="#权限相关" class="headerlink" title="权限相关"></a>权限相关</h1></li>
@@ -302,10 +305,23 @@
 </li>
 </ul>
 <h1 id="环境-软件相关"><a href="#环境-软件相关" class="headerlink" title="环境/软件相关"></a>环境/软件相关</h1><ul>
-<li>查看opencv版本<br><code>pkg-config --modversion opencv</code><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1></li>
+<li>查看opencv版本<br><code>pkg-config --modversion opencv</code></li>
+<li><p>ssh后台运行程序</p>
+<ul>
+<li>nohub: no hang up</li>
+<li>2&gt;&amp;1: 将标准出错重定向到标准输出</li>
+<li>&amp;: 后台运行</li>
+</ul>
+<p><code>nohup command &gt; myout.file 2&gt;&amp;1 &amp;</code></p>
+</li>
+</ul>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
 <li>刷新dns的缓存：<br><code>sudo /etc/init.d/nscd restart</code><br>如果发现提示命令找不到：sudo: /etc/init.d/nscd: command not found<br>需要先安装nscd包：<br><code>sudo apt-get install nscd</code></li>
 <li>重启网络：<br><code>sudo /etc/init.d/networking restart</code></li>
-<li>修改grub参数并更新grub<br><code>sudo vim /etc/default/grub</code><br><code>sudo update-grub</code></li>
+<li><p>修改grub参数并更新grub<br><code>sudo vim /etc/default/grub</code><br><code>sudo update-grub</code></p>
+</li>
+<li><p>设置ssh时的终端颜色<br><code>tput colors</code> 可以查看当前色彩深度<br>在.bashrc中加入 <code>export TERM=&#39;xterm-256color</code> 可以设置为256色</p>
+</li>
 </ul>
 <div class="note default">
             <p>Ubunt&amp; Vim 常用命令汇总壁纸 </p>
@@ -442,14 +458,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -500,12 +516,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">19k</span>
+    <span title="站点总字数">25k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">17 分钟</span>
+    <span title="站点阅读时长">23 分钟</span>
 </div>
 
 <div id="days"></div>
