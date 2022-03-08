@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://brighthammer.github.io/2022/03/08/Qt+VS%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2022-03-08</lastmod>
+  </url>
+  <url>
     <loc>https://brighthammer.github.io/2021/11/13/Ubuntu%E4%BD%BF%E7%94%A8rsync%E5%90%8C%E6%AD%A5%E6%96%87%E4%BB%B6%E5%88%B0Windows/</loc>
     <lastmod>2021-11-13</lastmod>
   </url>

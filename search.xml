@@ -19,6 +19,33 @@
       </tags>
   </entry>
   <entry>
+    <title>Qt+VS中文乱码问题尽可能完全指南</title>
+    <url>/2022/03/08/Qt+VS%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<blockquote>
+<p>忍受Qt的中文乱码问题很久了，整理了一下避免乱码的方法<br><span id="more"></span></p>
+</blockquote>
+<h1 id=""><a href="#" class="headerlink" title=" "></a> </h1><div class="note warning">
+            <p>建议慎用直接修改编码格式。</p>
+          </div>
+<ul>
+<li>很多教程里一上来可能就说设置为”utf-8”就会好，但是也会有很多副作用，比如：</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> execution_character_set(<span class="meta-string">&quot;utf-8&quot;</span>) <span class="comment">// 指定字符集，设置前后貌似没发现变化</span></span></span><br><span class="line"></span><br><span class="line">QTextCodec::<span class="built_in">setCodecForLocale</span>(QTextCodec::<span class="built_in">codecForName</span>(<span class="string">&quot;utf-8&quot;</span>)); <span class="comment">// 这一行也许能暂时解决某个问题，但是会带来更多bug</span></span><br></pre></td></tr></table></figure>
+<h1 id="经测试正常的使用方法："><a href="#经测试正常的使用方法：" class="headerlink" title="经测试正常的使用方法："></a>经测试正常的使用方法：</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/// 字符串 -&gt; QString</span></span><br><span class="line"><span class="comment">// qDebug以及其他Qt内置函数会强制转换为QString，不做处理则会乱码，建议用fromLocal8Bit提前转换防止中文乱码</span></span><br><span class="line"><span class="built_in">qDebug</span>() &lt;&lt; QString::<span class="built_in">fromLocal8Bit</span>(<span class="string">&quot;中文输出内容&quot;</span>); </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/// QString -&gt; char*</span></span><br><span class="line"><span class="keyword">char</span>* cstr = qstr.<span class="built_in">toLocal8Bit</span>().<span class="built_in">data</span>(); <span class="comment">// 通过toLocal8Bit进行转换，表示按照Unicode编码进行转换</span></span><br><span class="line"><span class="comment">// 也可以分两步写</span></span><br><span class="line">QByteArray temp = qstr.<span class="built_in">toLocal8Bit</span>();</span><br><span class="line"><span class="keyword">char</span> *cstr = temp.<span class="built_in">data</span>(); <span class="comment">// 有说法是写一行乱码，分开写不乱码，我测试均正常</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/// QString -&gt; std::string</span></span><br><span class="line">std::string str = std::<span class="built_in">string</span>(qstr.<span class="built_in">toLocal8Bit</span>().<span class="built_in">data</span>()); <span class="comment">// 先用toLocal8Bit转为不乱码的char*，再转为std::string</span></span><br><span class="line"><span class="comment">// std::string str = qstr.toStdString(); // 不建议用，这种情况下中文会乱码</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>c++ coding</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>Qt</tag>
+        <tag>字符编码</tag>
+        <tag>QString</tag>
+        <tag>string</tag>
+        <tag>char *</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu使用rsync同步文件到Windows</title>
     <url>/2021/11/13/Ubuntu%E4%BD%BF%E7%94%A8rsync%E5%90%8C%E6%AD%A5%E6%96%87%E4%BB%B6%E5%88%B0Windows/</url>
     <content><![CDATA[<blockquote>
@@ -27,7 +54,7 @@
 <h2 id="Ubuntu服务端配置方法"><a href="#Ubuntu服务端配置方法" class="headerlink" title="Ubuntu服务端配置方法"></a>Ubuntu服务端配置方法</h2><ul>
 <li>Ubuntu一般都自带rsync，没有的话可以用apt安装一下</li>
 <li>接着新建一个文件夹，用来放配置文件等，为了省得总是sudo，可以直接放在home/usr下面</li>
-<li>新建rsyncd.conf 配置文件, 内容如下：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>新建rsyncd.conf 配置文件, 内容如下：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">### rsyncd.conf 文件的配置</span></span><br><span class="line"><span class="comment"># /etc/rsyncd: configuration file for rsync daemon mode</span></span><br><span class="line"><span class="comment"># See rsyncd.conf man page for more options.</span></span><br><span class="line"><span class="comment"># 传输文件使用的用户和用户组，如果是从服务器=&gt;客户端，要保证www用户对文件有读取的权限；如果是从客户端=&gt;服务端，要保证www对文件有写权限。</span></span><br><span class="line">uid = www</span><br><span class="line">gid = www</span><br><span class="line"><span class="comment"># 允许chroot，提升安全性，客户端连接模块，首先chroot到模块path参数指定的目录下，chroot为yes时必须使用root权限，且不能备份path路径外的链接文件</span></span><br><span class="line">use chroot = yes</span><br><span class="line"><span class="comment"># 只读</span></span><br><span class="line"><span class="built_in">read</span> only = no</span><br><span class="line"><span class="comment"># 只写</span></span><br><span class="line">write only = no</span><br><span class="line"><span class="comment"># 设定白名单，可以指定IP段（172.18.50.1/255.255.255.0）,各个Ip段用空格分开</span></span><br><span class="line">hosts allow = 172.18.50.110 172.18.50.111</span><br><span class="line">hosts deny = *</span><br><span class="line"><span class="comment"># 允许的客户端最大连接数</span></span><br><span class="line">max connections = 4</span><br><span class="line"><span class="comment"># 欢迎文件的路径，非必须</span></span><br><span class="line"><span class="comment"># motd file = /etc/rsync/rsyncd.motd</span></span><br><span class="line"><span class="comment"># pid文件路径</span></span><br><span class="line">pid file = /var/run/rsyncd.pid</span><br><span class="line"><span class="comment"># 记录传输文件日志</span></span><br><span class="line">transfer logging = yes</span><br><span class="line"><span class="comment"># 日志文件格式</span></span><br><span class="line"><span class="built_in">log</span> format = %t %a %m %f %b</span><br><span class="line"><span class="comment"># 指定日志文件</span></span><br><span class="line"><span class="built_in">log</span> file = /var/<span class="built_in">log</span>/rsync.log</span><br><span class="line"><span class="comment"># 剔除某些文件或目录，不同步</span></span><br><span class="line">exclude = lost+found/</span><br><span class="line"><span class="comment"># 设置超时时间</span></span><br><span class="line">timeout = 900</span><br><span class="line">ignore nonreadable = yes</span><br><span class="line"><span class="comment"># 设置不需要压缩的文件</span></span><br><span class="line">dont compress   = *.gz *.tgz *.zip *.z *.Z *.rpm *.deb *.bz2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 模块，可以配置多个，使用如: sate@172.18.50.125::test</span></span><br><span class="line">[<span class="built_in">test</span>]</span><br><span class="line"><span class="comment"># 模块的根目录，同步目录，要注意权限</span></span><br><span class="line">path = /tmp/nginx</span><br><span class="line"><span class="comment"># 是否允许列出模块内容</span></span><br><span class="line">list = no</span><br><span class="line"><span class="comment"># 忽略错误</span></span><br><span class="line">ignore errors</span><br><span class="line"><span class="comment"># 添加注释</span></span><br><span class="line">comment = ftp <span class="built_in">export</span> area</span><br><span class="line"><span class="comment"># 模块验证的用户名称，可使用空格或者逗号隔开多个用户名</span></span><br><span class="line">auth users = sate</span><br><span class="line"><span class="comment"># 模块验证密码文件 可放在全局配置里</span></span><br><span class="line">secrets file = /etc/rsync/rsyncd.secrets</span><br><span class="line"><span class="comment"># 剔除某些文件或目录，不同步</span></span><br><span class="line">exclude = lost+found/ conf/ man/</span><br></pre></td></tr></table></figure></li>
 <li>其中：<ul>
 <li>[test]后面为子模块，可以设置多个，以对应不同的同步目录</li>
 <li>rsyncd.secrets为密码的文件，内容为：“用户名:密码”</li>
