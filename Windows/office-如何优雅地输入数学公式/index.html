@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="google-site-verification" content="87yDUUQKo0QQXeYpDHElsKVsBVahBjkGy9P49v5EPZI">
+  <meta name="baidu-site-verification" content="MKqOqaXN2y">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"brighthammer.github.io","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":16,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"path":"search.xml","motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="office输入公式的快捷语法详细介绍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="office - 如何优雅地输入数学公式">
+<meta property="og:url" content="https://brighthammer.github.io/Windows/office-%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Bright Hammer">
+<meta property="og:description" content="office输入公式的快捷语法详细介绍">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://brighthammer.github.io/images/WordFormulaSymbol.png">
+<meta property="og:image" content="https://brighthammer.github.io/images/WordFormulaSymbol-theta.png">
+<meta property="og:image" content="https://brighthammer.github.io/images/WordFormulaStructures.png">
+<meta property="og:image" content="https://brighthammer.github.io/images/WordFormulaAutoNumbering.png">
+<meta property="og:image" content="https://brighthammer.github.io/images/WordFormulaAutoNumbering-InsertNum.png">
+<meta property="article:published_time" content="2020-07-26T06:32:39.000Z">
+<meta property="article:modified_time" content="2020-07-26T06:32:39.000Z">
+<meta property="article:author" content="Bright Hammer">
+<meta property="article:tag" content="office">
+<meta property="article:tag" content="word">
+<meta property="article:tag" content="公式">
+<meta property="article:tag" content="排版">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brighthammer.github.io/images/WordFormulaSymbol.png">
+
+<link rel="canonical" href="https://brighthammer.github.io/Windows/office-%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>office - 如何优雅地输入数学公式 | Bright Hammer</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="Bright Hammer" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+	<a target="_blank" rel="noopener" href="https://github.com/BrightHammer" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Bright Hammer</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">Talk is cheap, Show me the code</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://brighthammer.github.io/Windows/office-%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Bright Hammer">
+      <meta itemprop="description" content="手持两把锟斤拷 口里疾呼烫烫烫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bright Hammer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          office - 如何优雅地输入数学公式
+        </h2>
+
+        <div class="post-meta">
+		  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-26 14:32:39" itemprop="dateCreated datePublished" datetime="2020-07-26T14:32:39+08:00">2020-07-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/c-coding/" itemprop="url" rel="index">
+                    <span itemprop="name">c++ coding</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>office输入公式的快捷语法详细介绍<br><span id="more"></span></p>
+</blockquote>
+<h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>最近用word写作业要输很多公式，网上学习了一些小技巧，感觉终于感受到了用word输公式的快乐，表示再也不怕word的公式不好看了，也不需要频繁切换鼠标键盘了，写个帖子稍微总结一下常用操作。</p>
+<p>先放上一些主要的参考链接：</p>
+<ul>
+<li><strong>官方说明：<a href="[https://support.microsoft.com/zh-cn/office/word-%e4%b8%ad%e4%bd%bf%e7%94%a8-unicodemath-%e5%92%8c-latex-%e7%9a%84%e7%ba%bf%e6%80%a7%e6%a0%bc%e5%bc%8f%e5%85%ac%e5%bc%8f-2e00618d-b1fd-49d8-8cb4-8d17f25754f8?ui=zh-cn&amp;rs=zh-cn&amp;ad=cn](https://support.microsoft.com/zh-cn/office/word-中使用-unicodemath-和-latex-的线性格式公式-2e00618d-b1fd-49d8-8cb4-8d17f25754f8?ui=zh-cn&amp;rs=zh-cn&amp;ad=cn">Word 中使用 UnicodeMath 和 LaTeX 的线性格式公式</a>)</strong></li>
+<li><strong>Jacob Zhong 非常全面的总结：<a target="_blank" rel="noopener" href="https://zyxin.xyz/blog/2017-08/WordMath/">Word - 快速输入数学公式</a></strong></li>
+</ul>
+<h1 id="1-快捷键"><a href="#1-快捷键" class="headerlink" title="1.快捷键"></a>1.快捷键</h1><ul>
+<li><strong><code>Alt</code></strong>+<strong> <code>=</code></strong><ul>
+<li>插入新公式，或将当前选中的内容变换为公式</li>
+</ul>
+</li>
+<li><strong><code>Ctrl</code></strong> + <strong><code>I</code></strong><ul>
+<li>将公式设为斜体，可以在插入公式后立即设置，这样打出来的就直接是斜体了，减少了鼠标选中的操作</li>
+</ul>
+</li>
+<li><strong><code>空格</code></strong><ul>
+<li>输入快捷命令后最常用的格式转换键，即输入快捷命令后，按下空格，公式即会变成对应的格式</li>
+</ul>
+</li>
+<li><strong><code>Enter</code></strong><ul>
+<li>在部分场景下用于格式转换+回车</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-常用符号快捷输入"><a href="#2-常用符号快捷输入" class="headerlink" title="2. 常用符号快捷输入"></a>2. 常用符号快捷输入</h1><p>主要是这一部分符号的输入：</p>
+<p><img src="/images/WordFormulaSymbol.png" alt="img"></p>
+<p><strong>关键方法：<code>\ + 快捷命令 + 空格</code></strong></p>
+<p>命令解释：”\\”作为转义符，鼠标停留在符号上时会出现相应的快捷命令，比较好记，最后敲空格实现格式转换</p>
+<p><img src="/images/WordFormulaSymbol-theta.png" alt="img"></p>
+<p>一些栗子：</p>
+<ul>
+<li><code>\alpha</code> $\rightarrow$ $\alpha$</li>
+<li><code>\beta</code> $\rightarrow$ $\beta$</li>
+<li><code>\pi</code> $\rightarrow$ $\pi$</li>
+<li><code>\varphi</code> $\rightarrow$ $\varphi$</li>
+<li><code>...</code></li>
+</ul>
+<p>另外，有一些常用的数学符号，不需要转义符word也会自动合并</p>
+<ul>
+<li><code>/=</code> $\rightarrow$ $\neq$</li>
+<li><code>+-</code> $\rightarrow$ $\pm$</li>
+<li><code>&lt;=</code> $\rightarrow$ $\leq$</li>
+<li><code>...</code></li>
+</ul>
+<p>大部分快捷命令和LaTeX，Markdown等都差不多，还是比较好记的。</p>
+<h1 id="3-常用结构快捷输入"><a href="#3-常用结构快捷输入" class="headerlink" title="3. 常用结构快捷输入"></a>3. 常用结构快捷输入</h1><p>接下来一些常用的最费鼠标的各种结构（剩下一些用到的时候再来补充，更详细的可以参考帖子开头给的参考链接）：</p>
+<p><img src="/images/WordFormulaStructures.png" alt="img"></p>
+<h2 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h2><ul>
+<li><code>a/b</code> $\rightarrow$ $\frac{a}{b}$</li>
+<li><code>a\sdiv b</code> $\rightarrow$ $a/b$</li>
+<li><code>\partial a/\partial b</code> $\rightarrow$ $\frac{\partial a}{\partial b}$</li>
+<li><code>\Delta a/\Delta b</code> $\rightarrow$ $\frac{\Delta a}{\Delta b}$</li>
+</ul>
+<h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><ul>
+<li><code>a^b</code> $\rightarrow$ $a^b$</li>
+<li><code>a_b</code> $\rightarrow$ $a_b$</li>
+<li><code>a_b^c</code> $\rightarrow$ $a_b^c$</li>
+<li><code>(_c^b)a</code> $\rightarrow$ $_c^ba$</li>
+</ul>
+<h2 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h2><ul>
+<li><code>\sqrt a</code> $\rightarrow$ $\sqrt a$</li>
+<li><code>\sqrt (b&amp;a)</code> $\rightarrow$ $\sqrt[b]{a}$</li>
+<li><code>\cbrt a</code> $\rightarrow$ $\sqrt[3]{a}$</li>
+</ul>
+<h2 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h2><ul>
+<li><code>\int \of a</code> $\rightarrow$ $\int{a}$</li>
+<li><code>\iint \of a</code> $\rightarrow$ $\iint{a}$</li>
+<li><code>\int^b_c a</code> $\rightarrow$ $\int^b_c{a}$</li>
+</ul>
+<h2 id="大型运算符"><a href="#大型运算符" class="headerlink" title="大型运算符"></a>大型运算符</h2><h2 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h2><p>输入对应的括号后点空格</p>
+<ul>
+<li><code>(a+b)</code> $\rightarrow$ $(a+b)$</li>
+<li><code>&#123;a\times [b\times (c+d)]&#125;</code> $\rightarrow$ ${a\times[b\times(c+d)]}$</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h2 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h2><ul>
+<li><code>a\dot</code> $\rightarrow$ $\dot{a}$</li>
+<li><code>a\ddot</code> $\rightarrow$ $\ddot{a}$</li>
+<li><code>a\hat</code> $\rightarrow$ $\hat{a}$</li>
+<li><code>a\tilde</code> $\rightarrow$ $\tilde{a}$</li>
+</ul>
+<h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><ul>
+<li><code>\matrix (a&amp;b@c&amp;d)</code> $\rightarrow$ <script type="math/tex">\matrix{a&b \\ c&d}</script></li>
+</ul>
+<h1 id="4-自动编号"><a href="#4-自动编号" class="headerlink" title="4. 自动编号"></a>4. 自动编号</h1><p>以前公式自动编号我都是用一个表格，左边放公式，右边放编号，整体效果还行但还是不够完美，后来发现其实Word的公式有带编号的格式。</p>
+<p><strong>关键方法：在公式右边输入<code>#()</code>后按回车（这里必须回车，空格不行），随后在格式化后的括号中插入自动编号即可。</strong></p>
+<p>编号格式化之后的效果如下图：</p>
+<p><img src="/images/WordFormulaAutoNumbering.png" alt="img"></p>
+<p>然后在括号中<strong>插入-文档部件-域-编号-AutoNum-1,2,3</strong>即可，其他公式直接复制这个编号过去，文档中的公式即实现了自动编号。</p>
+<p><img src="/images/WordFormulaAutoNumbering-InsertNum.png" alt="img"></p>
+<blockquote>
+<p>为了写这篇帖子还把Markdown的公式过了一遍，，，感觉一些较为简单的公式还是Word稍微方便一些😁</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+	
+	<div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #555;font-size:14px;">-------------The End-------------</div>
+    
+</div>
+      
+    </div>
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Bright Hammer
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://brighthammer.github.io/Windows/office-%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" title="office - 如何优雅地输入数学公式">https://brighthammer.github.io/Windows/office-如何优雅地输入数学公式/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/office/" rel="tag"><i class="fa fa-tag"></i> office</a>
+              <a href="/tags/word/" rel="tag"><i class="fa fa-tag"></i> word</a>
+              <a href="/tags/%E5%85%AC%E5%BC%8F/" rel="tag"><i class="fa fa-tag"></i> 公式</a>
+              <a href="/tags/%E6%8E%92%E7%89%88/" rel="tag"><i class="fa fa-tag"></i> 排版</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/DeepLearning/Ubuntu%2018.04%E4%B8%8B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="prev" title="Ubuntu 18.04 下深度学习环境配置">
+      <i class="fa fa-chevron-left"></i> Ubuntu 18.04 下深度学习环境配置
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/Windows/Windows%20%E6%B8%85%E7%90%86C%E7%9B%98%20%E9%87%8A%E6%94%BE%E7%A9%BA%E9%97%B4%20%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/" rel="next" title="Windows 清理C盘 释放空间 方法汇总">
+      Windows 清理C盘 释放空间 方法汇总 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-text">0. 写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-text">1.快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%B8%B8%E7%94%A8%E7%AC%A6%E5%8F%B7%E5%BF%AB%E6%8D%B7%E8%BE%93%E5%85%A5"><span class="nav-text">2. 常用符号快捷输入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%B8%B8%E7%94%A8%E7%BB%93%E6%9E%84%E5%BF%AB%E6%8D%B7%E8%BE%93%E5%85%A5"><span class="nav-text">3. 常用结构快捷输入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%BC%8F"><span class="nav-text">分式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87"><span class="nav-text">上下标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B9%E5%BC%8F"><span class="nav-text">根式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%AF%E5%88%86"><span class="nav-text">积分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E5%9E%8B%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">大型运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%AC%E5%8F%B7"><span class="nav-text">括号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E6%B3%A8"><span class="nav-text">标注</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90"><span class="nav-text">极限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5"><span class="nav-text">矩阵</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E8%87%AA%E5%8A%A8%E7%BC%96%E5%8F%B7"><span class="nav-text">4. 自动编号</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a href="/">
+    <img class="site-author-image" itemprop="image" alt="Bright Hammer"
+      src="/images/avatar.png">
+  </a>
+  <p class="site-author-name" itemprop="name">Bright Hammer</p>
+  <div class="site-description" itemprop="description">手持两把锟斤拷 口里疾呼烫烫烫</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/brighthammer" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;brighthammer" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:tangjx@zju.edu.cn" title="E-Mail → mailto:tangjx@zju.edu.cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bright Hammer</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">33k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30 分钟</span>
+</div>
+
+<div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("02/02/2020 20:20:20");//修改为自己的blog建站时间
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+    
+
+  
+
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/cursor/fireworks.js"></script>
