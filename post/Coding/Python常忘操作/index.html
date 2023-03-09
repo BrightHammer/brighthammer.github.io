@@ -249,14 +249,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1k</span>
+              <span>2.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -272,31 +272,46 @@
 <p>Python经常忘记的操作：文件和文件夹操作 嵌套语句<br><span id="more"></span></p>
 </blockquote>
 <h1 id="1、文件操作"><a href="#1、文件操作" class="headerlink" title="1、文件操作"></a>1、文件操作</h1><p><strong>参考链接：</strong><a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-tutorial.html">Python 3 菜鸟教程</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 判断路径是否存在</span></span><br><span class="line"><span class="keyword">for</span> tmpdir <span class="keyword">in</span> [mask_dir, viz_dir]:</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(tmpdir):</span><br><span class="line">        os.mkdir(tmpdir) <span class="comment"># os.mkdirs()可创建多级目录</span></span><br><span class="line">        </span><br><span class="line"><span class="comment"># 提取路径中的文件名</span></span><br><span class="line">(file, ext) = os.path.splitext(url) <span class="comment"># 分割文件名和扩展名</span></span><br><span class="line">(path, filename) = os.path.split(url) <span class="comment"># 分割路径和文件名</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>文件/文件夹/路径操作</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 判断路径是否存在</span></span><br><span class="line"><span class="keyword">for</span> tmpdir <span class="keyword">in</span> [mask_dir, viz_dir]:</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(tmpdir):</span><br><span class="line">        os.mkdir(tmpdir) <span class="comment"># os.mkdirs()可创建多级目录</span></span><br><span class="line">        </span><br><span class="line"><span class="comment"># 提取路径中的文件名</span></span><br><span class="line">(file, ext) = os.path.splitext(url) <span class="comment"># 分割文件名和扩展名</span></span><br><span class="line">(path, filename) = os.path.split(url) <span class="comment"># 分割路径和文件名</span></span><br><span class="line"><span class="comment"># 绝对路径</span></span><br><span class="line">os.path.abspath(__file__)	<span class="comment"># 包括软链接</span></span><br><span class="line">os.path.realpath(__file__)	<span class="comment"># 去除软链接</span></span><br><span class="line"><span class="comment"># 复制文件</span></span><br><span class="line">shutil.copy(LAST, BEST)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>文本读写</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">read()	<span class="comment"># 将文本文件所有行读到一个字符串中。</span></span><br><span class="line">readline()	<span class="comment"># 一行一行的读</span></span><br><span class="line">readlines()	<span class="comment"># 将文本文件中所有行读到一个list中，文本文件每一行是list的一个元素。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法1</span></span><br><span class="line">file1 = <span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>) </span><br><span class="line">file2 = <span class="built_in">open</span>(<span class="string">&quot;output.txt&quot;</span>,<span class="string">&quot;w&quot;</span>) </span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>: </span><br><span class="line">    line = file1.readline() </span><br><span class="line">    file2.write(<span class="string">&#x27;&quot;&#x27;</span>+line[:s]+<span class="string">&#x27;&quot;&#x27;</span>+<span class="string">&quot;,&quot;</span>) </span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> line: </span><br><span class="line">        <span class="keyword">break</span> </span><br><span class="line">file1.close() </span><br><span class="line">file2.close() </span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法2</span></span><br><span class="line">file2 = <span class="built_in">open</span>(<span class="string">&quot;output.txt&quot;</span>,<span class="string">&quot;w&quot;</span>) </span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> <span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>): </span><br><span class="line">    file2.write(<span class="string">&#x27;&quot;&#x27;</span>+line[:s]+<span class="string">&#x27;&quot;&#x27;</span>+<span class="string">&quot;,&quot;</span>) </span><br><span class="line">file2.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法3</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;somefile.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f: </span><br><span class="line">     data = f.read() </span><br><span class="line"></span><br><span class="line"><span class="comment"># Iterate over the lines of the file </span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;somefile.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f: </span><br><span class="line">     <span class="keyword">for</span> line <span class="keyword">in</span> f: </span><br><span class="line">         <span class="comment"># ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Write chunks of text data </span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;somefile.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f: </span><br><span class="line">     f.write(text1) </span><br><span class="line"></span><br><span class="line"><span class="comment"># Redirected print statement </span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;somefile.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f: </span><br><span class="line">     <span class="built_in">print</span>(line1, file=f) </span><br><span class="line">     <span class="built_in">print</span>(line2, file=f) </span><br></pre></td></tr></table></figure>
 <h1 id="2、Numpy-PyTorch"><a href="#2、Numpy-PyTorch" class="headerlink" title="2、Numpy / PyTorch"></a>2、Numpy / PyTorch</h1><h2 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h2><ul>
 <li>维度</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.shape  <span class="comment"># (height, width, channels) OpenCV</span></span><br><span class="line">torch.shape  <span class="comment"># (N, channel, height, width) 2D</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li><h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2></li>
-<li><p>随机数</p>
-</li>
+<li>互相转换</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tor_arr = torch.from_numpy(np_arr)</span><br><span class="line">np_arr = tor_arr.numpy()</span><br></pre></td></tr></table></figure>
+<h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2><ul>
+<li>随机数</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">np.random.random   <span class="comment"># 生成指定形状的0- 1之间的随机数;</span></span><br><span class="line">np.random.rand     <span class="comment"># 生成指定形状的0- 1之间的随机数;</span></span><br><span class="line">np.random.randint  <span class="comment"># 生成指定数值范围内的随机整数;</span></span><br><span class="line">np.random.randn    <span class="comment"># 生成服从均值为0，标准差为1的标准正态分布随机数;</span></span><br><span class="line">np.random.normal   <span class="comment"># 生成指定均值和标准差的正态分布随机数;</span></span><br><span class="line">np.random.uniform  <span class="comment"># 生成均匀分布随机数;</span></span><br><span class="line">np.random.seed     <span class="comment"># 按照种子来生成随机数，种子一样，生成的随机数也一样;</span></span><br><span class="line">np.random.shuffle  <span class="comment"># 打乱数组元素顺序;</span></span><br><span class="line">np.random.choice   <span class="comment"># 按照指定概率从指定数组中，随机抽出某个数;</span></span><br><span class="line"><span class="comment"># 注意:由于是生成随机数，只要是没有设置随机种子，每次刷新结果后的值都是不一样的;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>运算</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数乘</span></span><br><span class="line">a*b</span><br><span class="line"><span class="comment"># 点乘</span></span><br><span class="line">a.dot(b)</span><br><span class="line">np.dot(a, b)</span><br><span class="line"><span class="comment"># 求逆</span></span><br><span class="line">np.linalg.inv(a)</span><br><span class="line">np.matrix().I</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数乘</span></span><br><span class="line">a*b</span><br><span class="line"><span class="comment"># 点乘</span></span><br><span class="line">a.dot(b)</span><br><span class="line">np.dot(a, b)</span><br><span class="line"><span class="comment"># 求逆</span></span><br><span class="line">np.linalg.inv(a)</span><br><span class="line">np.matrix().I</span><br></pre></td></tr></table></figure>
 <ul>
 <li>数据格式转换</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.astype(np.int32) </span><br></pre></td></tr></table></figure>
 <h2 id="Torch"><a href="#Torch" class="headerlink" title="Torch"></a>Torch</h2><ul>
-<li><h1 id="3、OpenCV"><a href="#3、OpenCV" class="headerlink" title="3、OpenCV"></a>3、OpenCV</h1></li>
-<li><p>单应性估计和变换</p>
-</li>
+<li>GPU</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 估计</span></span><br><span class="line">cv2.getPerspectiveTransform(pts2, pts1)</span><br><span class="line">cv2.findHomography()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变换</span></span><br><span class="line">cv2.warpPerspective()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置可用gpu的id</span></span><br><span class="line">os.environ[<span class="string">&quot;CUDA_VISIBLE_DEVICES&quot;</span>] = <span class="string">&#x27;0,1,2,3&#x27;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>运算</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 转置</span></span><br><span class="line">tesor.transpose()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>维度</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3、OpenCV</span></span><br><span class="line"></span><br><span class="line">* 单应性估计和变换</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"><span class="comment"># 估计</span></span><br><span class="line">cv2.getPerspectiveTransform(pts2, pts1)</span><br><span class="line">cv2.findHomography()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变换</span></span><br><span class="line">cv2.warpPerspective()</span><br></pre></td></tr></table></figure>
 <ul>
 <li>图像绘制</li>
 </ul>
@@ -305,6 +320,11 @@
 <li>基础编辑</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 裁剪图像</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>形态学</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 腐蚀，膨胀</span></span><br><span class="line">kernel = cv2.getStructuringElement(cv2.MORPH_RECT,(<span class="number">3</span>, <span class="number">3</span>))</span><br><span class="line">cv2.erode(mask, kernel)</span><br><span class="line">cv2.dilate(mask, kernel)</span><br><span class="line"><span class="comment"># 开操作: 先腐蚀再膨胀</span></span><br><span class="line"><span class="comment"># 闭操作：先膨胀再腐蚀</span></span><br><span class="line"><span class="comment"># cv2.MORPH_CLOSE，cv2.MORPH_OPEN</span></span><br><span class="line">cv2.morphologyEX(mask, cv2.MORPH_CLOSE, kernel)</span><br></pre></td></tr></table></figure>
+<h1 id="4、基础操作"><a href="#4、基础操作" class="headerlink" title="4、基础操作"></a>4、基础操作</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ASSIC 转换</span></span><br><span class="line">n = <span class="built_in">ord</span>(s)</span><br><span class="line">s = <span class="built_in">chr</span>(n)</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -417,7 +437,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1%E3%80%81%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-text">1、文件操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2%E3%80%81Numpy-PyTorch"><span class="nav-text">2、Numpy &#x2F; PyTorch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2"><span class="nav-text">转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Numpy"><span class="nav-text">Numpy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Torch"><span class="nav-text">Torch</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3%E3%80%81OpenCV"><span class="nav-text">3、OpenCV</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1%E3%80%81%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-text">1、文件操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2%E3%80%81Numpy-PyTorch"><span class="nav-text">2、Numpy &#x2F; PyTorch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2"><span class="nav-text">转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Numpy"><span class="nav-text">Numpy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Torch"><span class="nav-text">Torch</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4%E3%80%81%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="nav-text">4、基础操作</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -493,12 +513,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">30k</span>
+    <span title="站点总字数">31k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">27 分钟</span>
+    <span title="站点阅读时长">28 分钟</span>
 </div>
 
 <div id="days"></div>

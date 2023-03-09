@@ -249,7 +249,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.8k</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -274,14 +274,10 @@
 <h1 id="文件相关"><a href="#文件相关" class="headerlink" title="文件相关"></a>文件相关</h1><ul>
 <li><p>超级权限文件夹<br><code>sudo nautilus</code></p>
 </li>
-<li><p>创建新文件<br><code>touch newfile.txt</code></p>
+<li><p>软连接<br><code>ln -s /home/panda/Programs/ ~/桌面/Programs</code></p>
 </li>
-<li><p>创建文件夹<br><code>mkdir newdir</code></p>
-</li>
-<li><p>创建文件夹快捷方式<br><code>ln -s /home/panda/Programs/ ~/桌面/Programs</code></p>
-</li>
-<li><p>统计文件夹下文件数量</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l | grep <span class="string">&quot;^-&quot;</span> | <span class="built_in">wc</span> -l     <span class="comment"># 统计当前目录下文件的个数（不包括目录）</span></span><br><span class="line"><span class="built_in">ls</span> -lR | grep <span class="string">&quot;^-&quot;</span> | <span class="built_in">wc</span> -l    <span class="comment"># 统计当前目录下文件的个数（包括子目录）</span></span><br><span class="line"><span class="built_in">ls</span> -lR | grep <span class="string">&quot;^d&quot;</span> | <span class="built_in">wc</span> -l    <span class="comment"># 查看某目录下文件夹(目录)的个数（包括子目录）</span></span><br></pre></td></tr></table></figure>
+<li><p>统计文件夹下文件数量/大小</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l | grep <span class="string">&quot;^-&quot;</span> | <span class="built_in">wc</span> -l     <span class="comment"># 统计当前目录下文件的个数（不包括目录）</span></span><br><span class="line"><span class="built_in">ls</span> -lR | grep <span class="string">&quot;^-&quot;</span> | <span class="built_in">wc</span> -l    <span class="comment"># 统计当前目录下文件的个数（包括子目录）</span></span><br><span class="line"><span class="built_in">ls</span> -lR | grep <span class="string">&quot;^d&quot;</span> | <span class="built_in">wc</span> -l    <span class="comment"># 查看某目录下文件夹(目录)的个数（包括子目录）</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">ls</span> |<span class="built_in">head</span> -n 20 				<span class="comment"># 显示前n个</span></span><br><span class="line"><span class="built_in">ls</span> |<span class="built_in">tail</span> -n 20 				<span class="comment"># 显示后n个</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">du</span> -h --max-depth=1			  <span class="comment"># 查看当前目录下一级文件或文件夹各自使用的总空间大小</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>压缩解压</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 仅打包，并非压缩</span></span><br><span class="line">tar -xvf FileName.tar         <span class="comment"># 解包</span></span><br><span class="line">tar -cvf FileName.tar DirName <span class="comment"># 将DirName和其下所有文件（夹）打包</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># .gz</span></span><br><span class="line">gunzip FileName.gz  <span class="comment"># 解压1</span></span><br><span class="line">gzip -d FileName.gz <span class="comment"># 解压2</span></span><br><span class="line">gzip FileName       <span class="comment"># 压缩，只能压缩文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># tar.xz</span></span><br><span class="line">tar -xvf FileName.tar.xz   <span class="comment"># 解压1</span></span><br><span class="line">tar -xvJf FileName.tar.xz  <span class="comment"># 解压2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># .tar.gz 和 .tgz</span></span><br><span class="line">tar -zxvf FileName.tar.gz               <span class="comment"># 解压</span></span><br><span class="line">tar -zcvf FileName.tar.gz DirName       <span class="comment"># 将DirName和其下所有文件（夹）压缩</span></span><br><span class="line">tar -C DesDirName -zxvf FileName.tar.gz <span class="comment"># 解压到目标路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 感觉.zip占用空间比.tar.gz大</span></span><br><span class="line">unzip FileName.zip          <span class="comment"># 解压</span></span><br><span class="line">zip FileName.zip DirName    <span class="comment"># 将DirName本身压缩</span></span><br><span class="line">zip -r FileName.zip DirName <span class="comment"># 压缩，递归处理，将指定目录下的所有文件和子目录一并压缩</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># mac和linux并没有自带rar，需要去下载</span></span><br><span class="line">rar x FileName.rar      <span class="comment"># 解压</span></span><br><span class="line">rar a FileName.rar DirName <span class="comment"># 压缩</span></span><br></pre></td></tr></table></figure>
@@ -516,12 +512,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">30k</span>
+    <span title="站点总字数">31k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">27 分钟</span>
+    <span title="站点阅读时长">28 分钟</span>
 </div>
 
 <div id="days"></div>
