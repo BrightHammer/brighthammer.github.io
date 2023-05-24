@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.4.0">
@@ -24,17 +24,20 @@
     var CONFIG = {"hostname":"brighthammer.github.io","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":16,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"path":"search.xml","motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Bright Hammer">
-<meta property="og:url" content="https://brighthammer.github.io/404.html">
+  <meta name="description" content="反复折腾Padavan的transmission，踏过不少坑，被坑后草草记录一下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Padavan 路由器 transmission折腾心得">
+<meta property="og:url" content="https://brighthammer.github.io/post/Ubuntu/Padavan%20%E8%B7%AF%E7%94%B1%E5%99%A8%20transmission%E6%8A%98%E8%85%BE%E5%BF%83%E5%BE%97/index.html">
 <meta property="og:site_name" content="Bright Hammer">
+<meta property="og:description" content="反复折腾Padavan的transmission，踏过不少坑，被坑后草草记录一下">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-24T01:35:40.271Z">
-<meta property="article:modified_time" content="2023-05-24T01:35:40.271Z">
+<meta property="article:published_time" content="2023-03-22T08:33:49.000Z">
+<meta property="article:modified_time" content="2023-03-22T08:33:49.000Z">
 <meta property="article:author" content="Bright Hammer">
+<meta property="article:tag" content="Linux Padavan transmission 路由器">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://brighthammer.github.io/404">
+<link rel="canonical" href="https://brighthammer.github.io/post/Ubuntu/Padavan%20%E8%B7%AF%E7%94%B1%E5%99%A8%20transmission%E6%8A%98%E8%85%BE%E5%BF%83%E5%BE%97/">
 
 
 <script id="page-configurations">
@@ -42,12 +45,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title> | Bright Hammer
-  </title>
+  <title>Padavan 路由器 transmission折腾心得 | Bright Hammer</title>
   
 
 
@@ -80,11 +82,11 @@
 
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="Bright Hammer" type="application/atom+xml">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="Bright Hammer" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 	<a target="_blank" rel="noopener" href="https://github.com/BrightHammer" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -184,58 +186,174 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h2 class="post-title" itemprop="name headline">
-</h2>
-
-<div class="post-meta">
+      
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://brighthammer.github.io/post/Ubuntu/Padavan%20%E8%B7%AF%E7%94%B1%E5%99%A8%20transmission%E6%8A%98%E8%85%BE%E5%BF%83%E5%BE%97/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Bright Hammer">
+      <meta itemprop="description" content="手持两把锟斤拷 口里疾呼烫烫烫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bright Hammer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          Padavan 路由器 transmission折腾心得
+        </h2>
+
+        <div class="post-meta">
+		  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-03-22 16:33:49" itemprop="dateCreated datePublished" datetime="2023-03-22T16:33:49+08:00">2023-03-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ubuntu/" itemprop="url" rel="index">
+                    <span itemprop="name">Ubuntu</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>989</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>反复折腾Padavan的transmission，踏过不少坑，被坑后草草记录一下<br><span id="more"></span></p>
+</blockquote>
+<h2 id="系统情况"><a href="#系统情况" class="headerlink" title="系统情况"></a>系统情况</h2><ul>
+<li>路由器，刷老毛子Padavan（<a target="_blank" rel="noopener" href="https://t.me/s/pdcn1）">https://t.me/s/pdcn1）</a></li>
+<li>外挂一个移动硬盘，用于挂种子</li>
+<li>平时主要开着transmission、FTP、SMB等</li>
+</ul>
+<h2 id="2023-03-差点丢掉硬盘数据"><a href="#2023-03-差点丢掉硬盘数据" class="headerlink" title="2023 03 差点丢掉硬盘数据"></a>2023 03 差点丢掉硬盘数据</h2><h3 id="时间线："><a href="#时间线：" class="headerlink" title="时间线："></a>时间线：</h3><ul>
+<li>下载种子时没注意硬盘剩余空间，导致<strong>硬盘爆满</strong>（后续分析才想起，导火索）</li>
+<li><strong>transmission web control进不去</strong>，重启无效，查看log是config文件夹的setting无法创建</li>
+<li>删除setting后重启无效，遂重命名config文件夹，重启后生成新的config，随后将备份的resume和torrent导入，恢复种子状态（此时似乎已解决问题，但…）</li>
+<li>中间或许<strong>升级了一次Padavan固件</strong>，随后设置过程中出现路由器web<strong>无响应</strong>状况（网络功能正常，其他VPN服务、后台、ftp、smb等均不正常）</li>
+<li>以为是固件问题，<strong>遂降版本</strong>，此时已无原来的旧版本（很旧已经下不到了），先降再说</li>
+<li>短期内状态稍好，但<strong>FTP相关设置仍无法访问</strong>，继续折腾，不久又出现无响应状态</li>
+<li>怀疑不是固件原因，<strong>拔掉硬盘</strong>，关闭需要硬盘的相关应用，路由器功能一切正常</li>
+<li>同一时间FTP也存在问题，现象是<strong>AiDisk设置失败，FTP无法设置为用户访问，无法修改admin用户的读写权限</strong></li>
+<li>仍不死心企图修复transmission，遂ssh进入后台直接操作文件，问题终于逐渐露出水面…</li>
+<li><strong>原来，，，整个硬盘早已处于混沌状态！</strong></li>
+<li>各种<strong>反常理现象</strong>不亚于粒子对撞实验受到智子干扰，包括但不限于：删除文件夹A时文件夹B也不见了（没有软连接），某文件突然变成文件夹，文件夹或文件忽隐忽现，等等等等</li>
+<li>终于，意识到是<strong>硬盘文件系统可能出现损坏</strong>，第二天拔下硬盘用windows资源管理器<strong>扫描修复</strong>，耗时一天，硬盘甚至空出了两百多G</li>
+<li>修复后，部分文件丢失，后续在<strong>found.000</strong>文件夹下基本找到了，遂拷贝回原位置</li>
+<li>再次插入硬盘后，一切正常的Padavan终于回来了！</li>
+<li>随后是还原resume和torrent，修改文件夹名字（found.000下的文件夹名字是乱的），修改种子路径，重新校验（部分实在没办法）等一系列操作，transmission基本恢复如初。</li>
+</ul>
+<h3 id="教训"><a href="#教训" class="headerlink" title="教训"></a>教训</h3><ul>
+<li><strong>没事不要升级固件，想降级还不一定有（固件自己保存比较稳妥）</strong></li>
+<li><strong>决不能让硬盘爆掉</strong></li>
+<li><strong>开始出现玄学bug时不妨检查一下硬盘</strong></li>
+<li><strong>移动硬盘尽量不要带点拔</strong></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+	
+	<div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #555;font-size:14px;">-------------The End-------------</div>
+    
 </div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <!DOCTYPE HTML>
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=utf-8;"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="robots" content="all" />
-  <meta name="robots" content="index,follow"/>
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js"
-        charset="utf-8" homePageUrl="http://brighthammer.github.io"
-        homePageName="回到我的主页">
-</script>
-</body>
-</html>
-      </div>
-      
-      
       
     </div>
-    
+        
 
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Bright Hammer
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://brighthammer.github.io/post/Ubuntu/Padavan%20%E8%B7%AF%E7%94%B1%E5%99%A8%20transmission%E6%8A%98%E8%85%BE%E5%BF%83%E5%BE%97/" title="Padavan 路由器 transmission折腾心得">https://brighthammer.github.io/post/Ubuntu/Padavan 路由器 transmission折腾心得/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Linux-Padavan-transmission-%E8%B7%AF%E7%94%B1%E5%99%A8/" rel="tag"><i class="fa fa-tag"></i> Linux Padavan transmission 路由器</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/Terminal/SSH%E4%BD%BF%E7%94%A8bug%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/" rel="prev" title="SSH使用bug不完全指南">
+      <i class="fa fa-chevron-left"></i> SSH使用bug不完全指南
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
   </div>
 
 
@@ -287,6 +405,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%83%85%E5%86%B5"><span class="nav-text">系统情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-03-%E5%B7%AE%E7%82%B9%E4%B8%A2%E6%8E%89%E7%A1%AC%E7%9B%98%E6%95%B0%E6%8D%AE"><span class="nav-text">2023 03 差点丢掉硬盘数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E7%BA%BF%EF%BC%9A"><span class="nav-text">时间线：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%99%E8%AE%AD"><span class="nav-text">教训</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -455,7 +574,7 @@ show_date_time();
 
 
   
-<script src="/js/local-search.js"></script>
+<script src="/js/local-search.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
