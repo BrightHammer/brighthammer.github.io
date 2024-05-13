@@ -249,7 +249,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.9k</span>
+              <span>3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -275,7 +275,7 @@
 <ul>
 <li>文件/文件夹/路径操作</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 判断路径是否存在</span></span><br><span class="line"><span class="keyword">for</span> tmpdir <span class="keyword">in</span> [mask_dir, viz_dir]:</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(tmpdir):</span><br><span class="line">        os.mkdir(tmpdir) <span class="comment"># os.mkdirs()可创建多级目录</span></span><br><span class="line">        </span><br><span class="line"><span class="comment"># 提取路径中的文件名</span></span><br><span class="line">(file, ext) = os.path.splitext(url) <span class="comment"># 分割文件名和扩展名</span></span><br><span class="line">(path, filename) = os.path.split(url) <span class="comment"># 分割路径和文件名</span></span><br><span class="line"><span class="comment"># 绝对路径</span></span><br><span class="line">os.path.abspath(__file__)	<span class="comment"># 包括软链接</span></span><br><span class="line">os.path.realpath(__file__)	<span class="comment"># 去除软链接</span></span><br><span class="line"><span class="comment"># 复制文件</span></span><br><span class="line">shutil.copy(LAST, BEST)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 判断路径是否存在</span></span><br><span class="line"><span class="keyword">for</span> tmpdir <span class="keyword">in</span> [mask_dir, viz_dir]:</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(tmpdir):</span><br><span class="line">        os.mkdir(tmpdir) <span class="comment"># os.mkdirs()可创建多级目录</span></span><br><span class="line">        </span><br><span class="line"><span class="comment"># 提取路径中的文件名</span></span><br><span class="line">(file, ext) = os.path.splitext(url) <span class="comment"># 分割文件名和扩展名</span></span><br><span class="line">(path, filename) = os.path.split(url) <span class="comment"># 分割路径和文件名</span></span><br><span class="line"><span class="comment"># 绝对路径</span></span><br><span class="line">os.path.abspath(__file__)	<span class="comment"># 包括软链接</span></span><br><span class="line">os.path.realpath(__file__)	<span class="comment"># 去除软链接</span></span><br><span class="line"><span class="comment"># 复制文件</span></span><br><span class="line">shutil.copy(LAST, BEST)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 枚举所有路径</span></span><br><span class="line">names = os.listdir(project_path)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <ul>
 <li>文本读写</li>
 </ul>
@@ -300,10 +300,10 @@
 <li>数据格式转换</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.astype(np.int32) </span><br></pre></td></tr></table></figure>
-<h2 id="Torch"><a href="#Torch" class="headerlink" title="Torch"></a>Torch</h2><ul>
-<li>GPU</li>
+<ul>
+<li>通道变换</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置可用gpu的id</span></span><br><span class="line"><span class="comment"># 一定一定放在文件开头，在任何包调用cuda之前，设置该选项后，cuda_id重新计数</span></span><br><span class="line">os.environ[<span class="string">&quot;CUDA_VISIBLE_DEVICES&quot;</span>] = <span class="string">&#x27;0,1,2,3&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## Torch</span></span><br><span class="line"></span><br><span class="line">* GPU</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"><span class="comment"># 设置可用gpu的id</span></span><br><span class="line"><span class="comment"># 一定一定放在文件开头，在任何包调用cuda之前，设置该选项后，cuda_id重新计数</span></span><br><span class="line">os.environ[<span class="string">&quot;CUDA_VISIBLE_DEVICES&quot;</span>] = <span class="string">&#x27;0,1,2,3&#x27;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>运算</li>
 </ul>
@@ -444,7 +444,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1%E3%80%81%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-text">1、文件操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2%E3%80%81Numpy-PyTorch"><span class="nav-text">2、Numpy &#x2F; PyTorch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2"><span class="nav-text">转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Numpy"><span class="nav-text">Numpy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Torch"><span class="nav-text">Torch</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4%E3%80%81%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="nav-text">4、基础操作</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1%E3%80%81%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-text">1、文件操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2%E3%80%81Numpy-PyTorch"><span class="nav-text">2、Numpy &#x2F; PyTorch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2"><span class="nav-text">转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Numpy"><span class="nav-text">Numpy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4%E3%80%81%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="nav-text">4、基础操作</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -511,7 +511,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -520,12 +520,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">34k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">31 分钟</span>
 </div>
 
 <div id="days"></div>
